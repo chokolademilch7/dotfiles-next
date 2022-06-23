@@ -1,7 +1,11 @@
 local g = vim.g
+local opt = vim.opt
 local cmd = vim.cmd
 
 g.mapleader = '\<Space>'
+
+-- Option
+opt.number = true
 
 -- Commands
 cmd [[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]]
