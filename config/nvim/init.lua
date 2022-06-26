@@ -24,7 +24,8 @@ cmd [[command! PackerCompile packadd packer.nvim | lua require('plugins').compil
 local opts = {noremap = true, silent = true}
 
 -- Utils
-keymap.set('n', '<C-m>', ':noh<CE>', opts)
+keymap.set('n', '<C-m>', ':noh<CR>', opts)
+keymap.set('n', '<F12>', '<C-i>', opts)
 
 -- Emacs like keybindings
 keymap.set('i', '<C-p>', '<Up>', opts)
@@ -44,8 +45,8 @@ keymap.set('n', '<leader>k', '<C-w>k', opts)
 keymap.set('n', '<leader>j', '<C-w>j', opts)
 keymap.set('n', '<leader>l', '<C-w>l', opts)
 keymap.set('n', '<leader>c', '<C-w>c', opts)
-keymap.set('n', '<leader><leader>q', ':q!', opts)
-keymap.set('n', '<leader><leader>Q', ':qa!', opts)
+keymap.set('n', '<leader><leader>q', ':q!<CR>', opts)
+keymap.set('n', '<leader><leader>Q', ':qa!<CR>', opts)
 
 -- QuickFix
 keymap.set('n', '<leader>cn', ':cnext<CR>', opts)
