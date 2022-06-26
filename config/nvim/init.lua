@@ -8,6 +8,10 @@ g.mapleader = ' '
 
 -- Option --
 opt.number = true
+opt.scrolloff = 5
+opt.expandtab = true
+opt.tabstop = 2
+opt.shiftwidth = 2
 
 -- Commands --
 cmd [[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]]
@@ -30,6 +34,7 @@ keymap.set('i', '<C-f>', '<Right>', opts)
 keymap.set('i', '<C-a>', '<Home>', opts)
 keymap.set('i', '<C-e>', '<End>', opts)
 keymap.set('i', '<C-d>', '<Del>', opts)
+keymap.set('i', '<C-k>', '<Esc><Right>C', opts)
 
 -- Windows control
 keymap.set('n', '<leader>2', ':split<CR>', opts)
