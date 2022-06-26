@@ -14,6 +14,9 @@ local function init()
   -- Packer
   use {'wbthomason/packer.nvim', opt = true}
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
   -- Theme
   use {
     'projekt0n/github-nvim-theme',
@@ -28,10 +31,13 @@ local function init()
   -- Lint
   use {
     'jose-elias-alvarez/null-ls.nvim',
-    requires = 'nvim-lua/plenary.nvim'
+    requires = 'nvim-lua/plenary.nvim',
     config = function()
-      require('null-ls').setup({
-        require('null-ls').builtins.formatting.stylua
+      local null_ls = require('null-ls')
+      null_ls.setup({
+        sources = {
+	  null_ls.builtins.formatting.stylua
+        }
       })
     end
   }
