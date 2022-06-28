@@ -12,6 +12,7 @@ opt.scrolloff = 5
 opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
+opt.splitright = true
 
 -- Commands --
 cmd [[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]]
