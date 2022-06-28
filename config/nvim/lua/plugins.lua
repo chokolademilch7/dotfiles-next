@@ -61,7 +61,7 @@ local function init()
 				vim.keymap.set("n", "q", vim.fn["defx#do_action"]("quit"), opts)
 			end
 			local id = vim.api.nvim_create_augroup("DefxGroup", {})
-			vim.api.nvim_create_autocmd({ "BufEnter" }, {
+			vim.api.nvim_create_autocmd("FileType", {
 				group = "DefxGroup",
 				pattern = { "defx" },
 				callback = defx_key_settings,
