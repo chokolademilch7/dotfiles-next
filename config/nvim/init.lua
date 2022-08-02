@@ -27,6 +27,8 @@ local opts = { noremap = true, silent = true }
 -- Utils
 keymap.set("n", "<C-m>", ":noh<CR>", opts)
 keymap.set("n", "<F12>", "<C-i>", opts)
+keymap.set("n", "<leader>z", ":source $MYVIMRC<CR>", opts)
+keymap.set("n", "<leader>Z", ":PackerSync<CR>", opts)
 
 -- Emacs like keybindings
 keymap.set("i", "<C-p>", "<Up>", opts)
