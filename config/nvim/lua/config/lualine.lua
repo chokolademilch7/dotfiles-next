@@ -1,6 +1,6 @@
-local lualine = require("lualine")
+local lualine = require('lualine')
 lualine.setup({
-	options = {
-		theme = "github_dark",
-	},
+  options = {
+    theme = 'github_dark',
+  },
 })
