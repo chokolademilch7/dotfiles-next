@@ -20,7 +20,9 @@ local function init()
   })
   use({
     "neovim/nvim-lspconfig",
-    config = require('config.lspconfig')
+    config = function()
+      require('config.lspconfig')
+    end
   })
 
   -- Theme
@@ -29,27 +31,35 @@ local function init()
   })
   use({
     "projekt0n/github-nvim-theme",
-    config = require('config.github-theme')
+    config = function()
+      require('config.github-theme')
+    end
   })
 
   -- Lint & Formatter
   use({
     "jose-elias-alvarez/null-ls.nvim",
     requires = "nvim-lua/plenary.nvim",
-    config = require('config.null-ls')
+    config = function()
+      require('config.null-ls')
+    end
   })
 
   -- Filer
   use({
     "Shougo/defx.nvim",
-    config = require('config.defx')
+    config = function()
+      require('config.defx')
+    end
   })
 
   -- FuzzyFinder
   use({
     "nvim-telescope/telescope.nvim",
     requires = { { "nvim-lua/plenary.nvim" } },
-    config = require('config.telescope')
+    config = function()
+      require('config.telescope')
+    end
   })
 end
 
