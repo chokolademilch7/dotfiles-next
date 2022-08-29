@@ -16,7 +16,13 @@ local function init()
 
   -- LSP
   use({
-    'williamboman/nvim-lsp-installer',
+    'williamboman/mason.nvim',
+    config = function()
+      require('config.mason')
+    end,
+  })
+  use({
+    'williamboman/mason-lspconfig.nvim',
   })
   use({
     'neovim/nvim-lspconfig',
