@@ -26,11 +26,11 @@ local on_attach = function(client, bufnr)
   keymap.set('n', 'ge', lsp.buf.rename, bufopts)
   keymap.set('n', 'g.', lsp.buf.code_action, bufopts)
   keymap.set('n', 'gr', lsp.buf.references, bufopts)
-  keymap.set('n', '<leader>kf', lsp.buf.formatting, bufopts)
   keymap.set('i', 'C-i', lsp.buf.completion, bufopts)
   keymap.set('n', 'gs', lsp.buf.workspace_symbol, bufopts)
   keymap.set('n', 'gi', lsp.buf.incoming_calls, bufopts)
   keymap.set('n', 'gr', lsp.buf.outgoing_calls, bufopts)
+  keymap.set('n', '<leader>kf', lsp.buf.format, bufopts)
 end
 
 lspconfig['sumneko_lua'].setup({
