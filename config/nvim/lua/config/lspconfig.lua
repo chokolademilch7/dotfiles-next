@@ -1,6 +1,7 @@
 local lspconfig = require('lspconfig')
 local keymap = vim.keymap
 local lsp = vim.lsp
+local diagnostic = vim.diagnostic
 
 local on_attach = function(client, bufnr)
   -- set omnifunc
@@ -22,6 +23,13 @@ local on_attach = function(client, bufnr)
   keymap.set('n', 'g.', lsp.buf.code_action, bufopts)
   keymap.set('n', 'gr', lsp.buf.references, bufopts)
   keymap.set('n', '<leader>kf', lsp.buf.formatting, bufopts)
+local opts = { noremap = true }
+keymap.set("n", "C-j", diagnostic.goto_next, opts)
+keymap.set("n", "C-k", diagnostic.goto_prev, opts)
+	keymap.set("i", "C-i", lsp.buf.completion, bufopts)
+	keymap.set("n", "gs", lsp.buf.workspace_symbol, bufopts)
+	keymap.set("n", "gi", lsp.buf.incoming_calls, bufopts)
+	keymap.set("n", "gr", lsp.buf.outgoing_calls, bufopts)
 end
 
 lspconfig['sumneko_lua'].setup({
