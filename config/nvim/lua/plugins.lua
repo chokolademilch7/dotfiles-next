@@ -59,13 +59,6 @@ local function init()
   })
 
   -- Filer
-  --  use({
-  --    'Shougo/defx.nvim',
-  --    config = function()
-  --      require('config.defx')
-  --    end,
-  --  })
-
   use({
     'tamago324/lir.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
