@@ -61,7 +61,12 @@ local function init()
   -- Filer
   use({
     'tamago324/lir.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    requires = {
+      { 'kyazdani42/nvim-web-devicons', opt = true },
+      {
+        'tamago324/lir-git-status.nvim',
+      },
+    },
     config = function()
       require('config.lir')
     end,

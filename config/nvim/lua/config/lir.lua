@@ -75,3 +75,7 @@ lir.setup({
     vim.api.nvim_echo({ { vim.fn.expand('%:p'), 'Normal' } }, false, {})
   end,
 })
+
+-- plugins
+-- git_status
+require('lir.git_status').setup()
