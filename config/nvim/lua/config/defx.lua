@@ -28,7 +28,7 @@ local defx_key_settings = function()
   vim.keymap.set('n', '.', vim.fn['defx#do_action']('toggle_ignored_files'), onlyBuffer)
 end
 
-local id = vim.api.nvim_create_augroup('DefxGroup', {})
+vim.api.nvim_create_augroup('DefxGroup', {})
 vim.api.nvim_create_autocmd('FileType', {
   group = 'DefxGroup',
   pattern = { 'defx' },

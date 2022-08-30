@@ -7,12 +7,16 @@ local on_attach = function(client, bufnr)
   -- set omnifunc
   -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- Mappings.
+  local opts = { noremap = true }
+  keymap.set('n', 'C-j', diagnostic.goto_next, opts)
+  keymap.set('n', 'C-k', diagnostic.goto_prev, opts)
+
   local bufopts = { noremap = true, buffer = bufnr }
   keymap.set('n', 'gD', lsp.buf.declaration, bufopts)
   keymap.set('n', 'gd', lsp.buf.definition, bufopts)
   keymap.set('n', 'K', lsp.buf.hover, bufopts)
   keymap.set('n', 'gi', lsp.buf.implementation, bufopts)
-  keymap.set('n', '<C-k>', lsp.buf.signature_help, bufopts)
+  keymap.set('n', '<C-l>', lsp.buf.signature_help, bufopts)
   keymap.set('n', '<leader>wa', lsp.buf.add_workspace_folder, bufopts)
   keymap.set('n', '<leader>wr', lsp.buf.remove_workspace_folder, bufopts)
   keymap.set('n', '<leader>wl', function()
@@ -23,13 +27,10 @@ local on_attach = function(client, bufnr)
   keymap.set('n', 'g.', lsp.buf.code_action, bufopts)
   keymap.set('n', 'gr', lsp.buf.references, bufopts)
   keymap.set('n', '<leader>kf', lsp.buf.formatting, bufopts)
-local opts = { noremap = true }
-keymap.set("n", "C-j", diagnostic.goto_next, opts)
-keymap.set("n", "C-k", diagnostic.goto_prev, opts)
-	keymap.set("i", "C-i", lsp.buf.completion, bufopts)
-	keymap.set("n", "gs", lsp.buf.workspace_symbol, bufopts)
-	keymap.set("n", "gi", lsp.buf.incoming_calls, bufopts)
-	keymap.set("n", "gr", lsp.buf.outgoing_calls, bufopts)
+  keymap.set('i', 'C-i', lsp.buf.completion, bufopts)
+  keymap.set('n', 'gs', lsp.buf.workspace_symbol, bufopts)
+  keymap.set('n', 'gi', lsp.buf.incoming_calls, bufopts)
+  keymap.set('n', 'gr', lsp.buf.outgoing_calls, bufopts)
 end
 
 lspconfig['sumneko_lua'].setup({
