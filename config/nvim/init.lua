@@ -13,6 +13,7 @@ opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.splitright = true
+opt.clipboard = 'unnamedplus'
 
 -- Commands --
 cmd([[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]])
