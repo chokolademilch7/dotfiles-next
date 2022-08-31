@@ -80,6 +80,31 @@ local function init()
       require('config.telescope')
     end,
   })
+
+  -- EditDX
+  -- Comment
+  use({
+    'numToStr/Comment.nvim',
+    config = function()
+      require('config.comment')
+    end,
+  })
+
+  -- Surround
+  use({
+    'kylechui/nvim-surround',
+    config = function()
+      require('config.surround')
+    end,
+  })
+
+  -- Autopairs
+  use({
+    'windwp/nvim-autopairs',
+    config = function()
+      require('config.autopairs')
+    end,
+  })
 end
 
 local plugins = setmetatable({}, {
