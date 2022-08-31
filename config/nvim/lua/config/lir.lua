@@ -25,7 +25,7 @@ lir.setup({
     ['N'] = actions.newfile,
     ['r'] = actions.rename,
     ['@'] = actions.cd,
-    ['Y'] = actions.yank_path,
+    ['y'] = actions.yank_path,
     ['.'] = actions.toggle_show_hidden,
     ['d'] = actions.delete,
 
