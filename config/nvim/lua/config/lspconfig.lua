@@ -39,3 +39,6 @@ lspconfig['sumneko_lua'].setup({
 lspconfig['tsserver'].setup({
   on_attach = on_attach,
 })
+lspconfig['lspconfig'].setup({
+  on_attach = on_attach,
+})
