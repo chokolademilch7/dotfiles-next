@@ -1,3 +1,5 @@
+# UnnecessaryMetafiles
+.DS_Store
 # Compiled neovim plugin
 plugin
 
