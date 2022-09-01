@@ -105,6 +105,15 @@ local function init()
       require('config.autopairs')
     end,
   })
+
+  -- Git
+  -- signs
+  use({
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('config.gitsigns')
+    end,
+  })
 end
 
 local plugins = setmetatable({}, {
