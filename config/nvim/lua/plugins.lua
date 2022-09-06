@@ -81,6 +81,15 @@ local function init()
     end,
   })
 
+  -- TerminalDX
+  -- Toggle
+  use({
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require('config.toggleterm')
+    end,
+  })
+
   -- EditDX
   -- Comment
   use({
