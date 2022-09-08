@@ -48,6 +48,9 @@ local function init()
       require('config.lualine')
     end,
   })
+  use({
+    'kyazdani42/nvim-web-devicons',
+  })
 
   -- Lint & Formatter
   use({

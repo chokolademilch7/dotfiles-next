@@ -12,9 +12,11 @@ opt.scrolloff = 5
 opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
+
 opt.splitright = true
 opt.clipboard = 'unnamedplus'
 opt.cursorline = true
+opt.winblend = 20
 
 -- Commands --
 cmd([[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]])
@@ -25,6 +27,7 @@ cmd([[command! PackerCompile packadd packer.nvim | lua require('plugins').compil
 
 -- Keymaps --
 local opts = { noremap = true, silent = true }
+local interactive = { noremap = true }
 
 -- Utils
 keymap.set('n', '<C-m>', ':noh<CR>', opts)
@@ -52,6 +55,7 @@ keymap.set('n', '<leader>l', '<C-w>l', opts)
 keymap.set('n', '<leader>c', '<C-w>c', opts)
 keymap.set('n', '<leader><leader>q', ':q!<CR>', opts)
 keymap.set('n', '<leader><leader>Q', ':qa!<CR>', opts)
+keymap.set('n', 'te', ':tabe ', interactive)
 
 -- QuickFix
 keymap.set('n', '<leader>cn', ':cnext<CR>', opts)

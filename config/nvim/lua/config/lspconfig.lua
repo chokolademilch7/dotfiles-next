@@ -39,6 +39,6 @@ lspconfig['sumneko_lua'].setup({
 lspconfig['tsserver'].setup({
   on_attach = on_attach,
 })
-lspconfig['lspconfig'].setup({
+lspconfig['gopls'].setup({
   on_attach = on_attach,
 })
