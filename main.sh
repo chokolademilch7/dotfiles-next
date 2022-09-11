@@ -4,10 +4,10 @@ if type stow >/dev/null 2>&1; then
   echo "Are you ready ? We're ready for you. y/N"
   read input
   if [ $input = "y" ] || [ $input = "yes" ]; then
-    stow -d ./config -t $HOME nvim
-    stow -d ./config -t $HOME lazygit
-    stow -d ./config -t $HOME yabai
-    stow -d ./config -t $HOME skhd
+    stow -d ./packages -t $HOME nvim
+    stow -d ./packages -t $HOME lazygit
+    stow -d ./packages -t $HOME yabai
+    stow -d ./packages -t $HOME skhd
     echo "Success!!"
   elif [ $input = "n" ] || [ $input = "no" ]; then
     echo "See you later."
