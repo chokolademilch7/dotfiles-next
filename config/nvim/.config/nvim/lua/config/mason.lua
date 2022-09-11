@@ -9,5 +9,5 @@ mason.setup({
   },
 })
 masonLspconfig.setup({
-  ensure_installed = { 'sumneko_lua', 'tsserver', 'tailwindcss', 'gopls' },
+  ensure_installed = { 'sumneko_lua', 'tsserver', 'tailwindcss', 'gopls', 'bashls' },
 })
