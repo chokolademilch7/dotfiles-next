@@ -7,7 +7,7 @@ local lazygit = Terminal:new({
   hidden = true,
 })
 local nnn = Terminal:new({
-  cmd = "nnn",
+  cmd = "nnn -aP p",
   direction = 'float',
   hidden = true,
 })
