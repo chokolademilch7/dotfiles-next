@@ -1,7 +1,0 @@
-gui:
-  showIcons: true
-  disableStartupPopups: true
-  notARepository: 'quit'
-git:
-  disableForcePushing: true
-

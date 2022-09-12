@@ -1,0 +1,11 @@
+gui:
+  showFileTree: false
+  showIcons: true
+  language: 'en'
+git:
+  disableForcePushing: true
+  paging:
+    colorArg: always
+    pager: delta --dark --diff-so-fancy --paging=never
+disableStartupPopups: true
+notARepository: 'quit'
