@@ -40,5 +40,6 @@ yabai -m config --space 2 window_gap 0
 # Rules
 yabai -m rule --add app="^Alacritty$" manage=off
 yabai -m rule --add app="^DeepL$" manage=off
+yabai -m rule --add app="^Alfred$" manage=off
 
 echo "yabai configuration loaded.."
