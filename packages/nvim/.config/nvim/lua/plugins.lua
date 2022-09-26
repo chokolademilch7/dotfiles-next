@@ -103,7 +103,7 @@ local function init()
   })
   -- ZEN
   use({
-    'folke/zen-mode.nvim',
+    'Pocco81/true-zen.nvim',
     config = function()
       require('config.zen')
     end,
