@@ -94,6 +94,13 @@ local function init()
   })
 
   -- EditDX
+  -- EasyMotion
+  use({
+    'ggandor/leap.nvim',
+    config = function()
+      require('config.leap')
+    end,
+  })
   -- Comment
   use({
     'numToStr/Comment.nvim',
