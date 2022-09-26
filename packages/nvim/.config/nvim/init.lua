@@ -32,7 +32,7 @@ local interactive = { noremap = true }
 -- Utils
 keymap.set('n', '<C-m>', ':noh<CR>', opts)
 keymap.set('n', '<F12>', '<C-i>', opts)
-keymap.set('n', '<leader>z', ':source $MYVIMRC<CR>', opts)
+keymap.set('n', '<leader>zz', ':source $MYVIMRC<CR>', opts)
 keymap.set('n', '<leader><leader>z', ':PackerSync<CR>', opts)
 
 -- Emacs like keybindings
