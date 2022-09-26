@@ -101,6 +101,13 @@ local function init()
       require('config.leap')
     end,
   })
+  -- ZEN
+  use({
+    'folke/zen-mode.nvim',
+    config = function()
+      require('config.zen')
+    end,
+  })
   -- Comment
   use({
     'numToStr/Comment.nvim',
