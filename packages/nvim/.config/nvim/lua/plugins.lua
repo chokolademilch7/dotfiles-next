@@ -36,6 +36,12 @@ local function init()
       require('config.dressing')
     end
   })
+  use({
+    'folke/trouble.nvim',
+    config = function()
+      require('config.trouble')
+    end
+  })
 
   -- Theme
   use({
