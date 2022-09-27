@@ -30,6 +30,12 @@ local function init()
       require('config.lspconfig')
     end,
   })
+  use({
+    'stevearc/dressing.nvim',
+    config = function()
+      require('config.dressing')
+    end
+  })
 
   -- Theme
   use({
