@@ -34,14 +34,24 @@ local function init()
     'stevearc/dressing.nvim',
     config = function()
       require('config.dressing')
-    end
+    end,
   })
   use({
     'folke/trouble.nvim',
     config = function()
       require('config.trouble')
-    end
+    end,
   })
+
+  -- CMP
+  use({
+    'hrsh7th/nvim-cmp',
+    requires = { 'hrsh7th/cmp-nvim-lsp' },
+    config = function()
+      require('config.cmp')
+    end,
+  })
+  use({ 'L3MON4D3/LuaSnip', run = 'make install_jsregexp' })
 
   -- Theme
   use({

@@ -33,13 +33,20 @@ local on_attach = function(_, bufnr)
   keymap.set('n', '<leader>kf', lsp.buf.format, bufopts)
 end
 
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 lspconfig['sumneko_lua'].setup({
+  capabilities = capabilities,
   on_attach = on_attach,
 })
 lspconfig['tsserver'].setup({
+  capabilities = capabilities,
   on_attach = on_attach,
 })
 lspconfig['gopls'].setup({
+  capabilities = capabilities,
   on_attach = on_attach,
 })
 lspconfig['bashls'].setup({
