@@ -12,15 +12,13 @@ local nnn = Terminal:new({
   hidden = true,
 })
 
----@diagnostic disable-next-line: lowercase-global
-function _lazygit_toggle()
+function Lazygit_toggle()
   lazygit:toggle()
 end
 
----@diagnostic disable-next-line: lowercase-global
-function _nnn_toggle()
+function NNN_toggle()
   nnn:toggle()
 end
 
-api.nvim_set_keymap('n', '<leader>gg', ':lua _lazygit_toggle()<CR>', opts)
-api.nvim_set_keymap('n', '<leader>nn', ':lua _nnn_toggle()<CR>', opts)
+api.nvim_set_keymap('n', '<leader>gg', ':lua Lazygit_toggle()<CR>', opts)
+api.nvim_set_keymap('n', '<leader>nn', ':lua NNN_toggle()<CR>', opts)
