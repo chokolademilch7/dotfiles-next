@@ -4,8 +4,6 @@ local lsp = vim.lsp
 local diagnostic = vim.diagnostic
 
 local on_attach = function(_, bufnr)
-  -- set omnifunc
-  -- vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- Mappings.
   local opts = { noremap = true }
   keymap.set('n', 'gj', diagnostic.goto_next, opts)
@@ -31,6 +29,9 @@ local on_attach = function(_, bufnr)
   keymap.set('n', 'gi', lsp.buf.incoming_calls, bufopts)
   keymap.set('n', 'go', lsp.buf.outgoing_calls, bufopts)
   keymap.set('n', '<leader>kf', lsp.buf.format, bufopts)
+  keymap.set('n', '<leader>ke', function()
+    lsp.buf.code_action({ context = { only = { 'source.fixAll.eslint' } }, apply = true })
+  end, bufopts)
 end
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
@@ -41,7 +42,24 @@ lspconfig['sumneko_lua'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+lspconfig['emmet_ls'].setup({
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescriptreact', 'javascript', 'css' },
+  on_attach = on_attach,
+})
+lspconfig['eslint'].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
 lspconfig['tsserver'].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+lspconfig['jsonls'].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+lspconfig['tailwindcss'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
