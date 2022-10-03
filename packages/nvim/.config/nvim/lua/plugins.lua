@@ -37,6 +37,12 @@ local function init()
     end,
   })
   use({
+    'simrat39/symbols-outline.nvim',
+    config = function()
+      require('config.outline')
+    end,
+  })
+  use({
     'stevearc/dressing.nvim',
     config = function()
       require('config.dressing')
