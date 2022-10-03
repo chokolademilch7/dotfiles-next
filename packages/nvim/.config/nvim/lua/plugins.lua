@@ -31,6 +31,12 @@ local function init()
     end,
   })
   use({
+    'glepnir/lspsaga.nvim',
+    config = function()
+      require('config.lspsaga')
+    end,
+  })
+  use({
     'stevearc/dressing.nvim',
     config = function()
       require('config.dressing')
