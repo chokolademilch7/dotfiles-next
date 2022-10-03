@@ -12,7 +12,7 @@ local on_attach = function(_, bufnr)
   local bufopts = { noremap = true, buffer = bufnr }
   keymap.set('n', 'gD', lsp.buf.declaration, bufopts)
   keymap.set('n', 'gd', lsp.buf.definition, bufopts)
-  keymap.set('n', 'gkl', function ()
+  keymap.set('n', 'gkl', function()
     vim.cmd('vsplit')
     lsp.buf.definition()
   end, bufopts)
@@ -41,6 +41,10 @@ end
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
 
 lspconfig['sumneko_lua'].setup({
   capabilities = capabilities,
