@@ -88,8 +88,17 @@ local function init()
       require('config.lualine')
     end,
   })
+  -- Icon
   use({
     'kyazdani42/nvim-web-devicons',
+  })
+  -- UI
+  -- ScrollBar
+  use({
+    'petertriho/nvim-scrollbar',
+    config = function()
+      require('config.scrollbar')
+    end,
   })
 
   -- Lint & Formatter
