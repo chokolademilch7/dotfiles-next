@@ -64,7 +64,7 @@ local function init()
   -- CMP
   use({
     'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp' },
+    requires = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-cmdline' },
     config = function()
       require('config.cmp')
     end,
