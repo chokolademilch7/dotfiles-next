@@ -150,6 +150,12 @@ local function init()
       require('config.hop')
     end,
   })
+  -- BufferLine
+  use({
+    'akinsho/bufferline.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require('config.bufferline')
     end,
   })
   -- ZEN
@@ -166,7 +172,6 @@ local function init()
       require('config.comment')
     end,
   })
-
   -- Surround
   use({
     'kylechui/nvim-surround',
@@ -174,7 +179,6 @@ local function init()
       require('config.surround')
     end,
   })
-
   -- Autopairs
   use({
     'windwp/nvim-autopairs',
