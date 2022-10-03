@@ -186,6 +186,12 @@ local function init()
       require('config.autopairs')
     end,
   })
+  use({
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  })
 
   -- Git
   -- signs
