@@ -17,6 +17,7 @@ opt.clipboard = 'unnamedplus'
 opt.cursorline = true
 opt.winblend = 20
 opt.ignorecase = true
+opt.termguicolors = true
 
 -- Commands --
 cmd([[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]])
@@ -56,6 +57,9 @@ keymap.set('n', '<leader>c', '<C-w>c', opts)
 keymap.set('n', '<leader><leader>q', ':q!<CR>', opts)
 keymap.set('n', '<leader><leader>Q', ':qa!<CR>', opts)
 keymap.set('n', 'te', ':tabe ', interactive)
+
+-- Buffer control
+keymap.set('n', '<leader>q', ':bdelete<CR>', opts)
 
 -- QuickFix
 keymap.set('n', '<leader>cn', ':cnext<CR>', opts)
