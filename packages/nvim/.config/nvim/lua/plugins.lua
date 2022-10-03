@@ -192,6 +192,13 @@ local function init()
       require('nvim-ts-autotag').setup()
     end,
   })
+  use({
+    'kevinhwang91/nvim-ufo',
+    requires = { 'kevinhwang91/promise-async' },
+    config = function()
+      require('config.ufo')
+    end,
+  })
 
   -- Git
   -- signs
