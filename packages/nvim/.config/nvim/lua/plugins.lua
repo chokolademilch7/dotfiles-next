@@ -143,11 +143,13 @@ local function init()
   })
 
   -- EditDX
-  -- EasyMotion
+  -- Motion
   use({
-    'ggandor/leap.nvim',
+    'phaazon/hop.nvim',
     config = function()
-      require('config.leap')
+      require('config.hop')
+    end,
+  })
     end,
   })
   -- ZEN
