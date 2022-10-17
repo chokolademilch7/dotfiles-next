@@ -75,6 +75,9 @@ local function init()
   -- Theme
   use({
     'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('config.treesitter')
+    end,
   })
   use({
     'projekt0n/github-nvim-theme',
