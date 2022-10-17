@@ -131,7 +131,11 @@ local function init()
   -- FuzzyFinder
   use({
     'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } },
+    requires = {
+      { 'nvim-telescope/telescope-file-browser.nvim' },
+      { 'nvim-telescope/telescope-project.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+    },
     config = function()
       require('config.telescope')
     end,
