@@ -2,7 +2,7 @@ local ufo = require('ufo')
 local keymap = vim.keymap
 local opt = vim.opt
 
-opt.foldcolumn = '1'
+-- opt.foldcolumn = '1'
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
@@ -58,5 +58,5 @@ end
 
 ufo.setup({
   fold_virt_text_handler = handler,
-  close_fold_kinds = { 'imports', 'comment' },
+  close_fold_kinds = { 'imports' },
 })
