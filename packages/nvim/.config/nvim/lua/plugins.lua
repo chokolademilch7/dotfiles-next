@@ -208,6 +208,13 @@ local function init()
       require('config.gitsigns')
     end,
   })
+  use({
+    'lukas-reineke/indent-blankline.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('config.indent-blankline')
+    end,
+  })
 end
 
 local plugins = setmetatable({}, {
