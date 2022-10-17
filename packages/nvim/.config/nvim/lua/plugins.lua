@@ -37,7 +37,8 @@ local function init()
     end,
   })
   use({
-    'simrat39/symbols-outline.nvim',
+    'mxsdev/symbols-outline.nvim',
+    branch = 'merge-jsx-tree',
     config = function()
       require('config.outline')
     end,
