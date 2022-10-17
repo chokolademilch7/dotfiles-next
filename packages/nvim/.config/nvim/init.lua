@@ -18,6 +18,7 @@ opt.cursorline = true
 opt.winblend = 20
 opt.ignorecase = true
 opt.termguicolors = true
+opt.autochdir = true
 
 -- Commands --
 cmd([[command! PackerInstall packadd packer.nvim | lua require('plugins').install()]])
@@ -60,6 +61,8 @@ keymap.set('n', 'te', ':tabe ', interactive)
 
 -- Buffer control
 keymap.set('n', '<leader>q', ':bdelete<CR>', opts)
+keymap.set('n', 'H', ':bp<CR>', opts)
+keymap.set('n', 'L', ':bnext<CR>', opts)
 
 -- QuickFix
 keymap.set('n', '<leader>cn', ':cnext<CR>', opts)
