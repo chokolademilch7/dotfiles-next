@@ -2,7 +2,7 @@ local bufferline = require('bufferline')
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set('n', '<C-t>', ':BufferLinePick<CR>', opts)
+keymap.set('n', '<leader>b', ':BufferLinePick<CR>', opts)
 
 bufferline.setup({
   options = {
