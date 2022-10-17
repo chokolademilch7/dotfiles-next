@@ -217,6 +217,12 @@ local function init()
     end,
   })
   use({
+    'emmanueltouzery/agitator.nvim',
+    config = function()
+      require('config.agitator')
+    end,
+  })
+  use({
     'lukas-reineke/indent-blankline.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
