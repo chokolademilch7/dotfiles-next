@@ -223,6 +223,13 @@ local function init()
     end,
   })
   use({
+    'sindrets/diffview.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('config.diffview')
+    end,
+  })
+  use({
     'lukas-reineke/indent-blankline.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
