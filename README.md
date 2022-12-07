@@ -1,7 +1,7 @@
 ## Try this before setting up
 https://github.com/wbthomason/packer.nvim#quickstart
 
-run　 → `<leader><leader>z`
+→ `<leader><leader>z`
 
 ## Additional Settings
 ### alt + tab
