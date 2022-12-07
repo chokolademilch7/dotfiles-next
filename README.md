@@ -2,6 +2,7 @@
 https://github.com/wbthomason/packer.nvim#quickstart
 
 ## Additional Settings
+### alt + tab
 systemsettings -> keyboard -> shortcut -> service -> next window ctl
 
 `defaults write -g InitialKeyRepeat -int 11`
