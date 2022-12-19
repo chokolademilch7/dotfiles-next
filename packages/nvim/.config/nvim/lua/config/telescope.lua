@@ -8,8 +8,17 @@ local project = telescope.extensions.project
 vim.keymap.set('n', 'sF', builtin.find_files, opts)
 vim.keymap.set('n', 'sf', builtin.git_files, opts)
 vim.keymap.set('n', 'sg', builtin.git_status, opts)
-vim.keymap.set('n', 'sl', builtin.live_grep, opts)
-vim.keymap.set('n', 'ss', builtin.grep_string, opts)
+vim.keymap.set('n', 'sl', function()
+  builtin.live_grep({
+    cwd = vim.fn.systemlist('git rev-parse --show-toplevel')[1],
+  })
+end, opts)
+vim.keymap.set('n', 'ss', function()
+  builtin.grep_string({
+    cwd = vim.fn.systemlist('git rev-parse --show-toplevel')[1],
+  })
+end, opts)
+-- vim.keymap.set('n', 'ss', builtin.grep_string, opts)
 vim.keymap.set('n', 'sh', builtin.oldfiles, opts)
 vim.keymap.set('n', 'sb', builtin.buffers, opts)
 vim.keymap.set('n', 'sq', builtin.quickfix, opts)

@@ -180,9 +180,12 @@ local function init()
       require('config.comment')
     end,
   })
+  use({
+    'JoosepAlviste/nvim-ts-context-commentstring',
+  })
   -- Surround
   use({
-    'kylechui/nvim-surround',
+    'echasnovski/mini.surround',
     config = function()
       require('config.surround')
     end,
@@ -227,6 +230,17 @@ local function init()
     requires = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('config.diffview')
+    end,
+  })
+  use({
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function()
+      require('octo').setup()
     end,
   })
   use({

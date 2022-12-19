@@ -2,6 +2,7 @@ local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
 local keymap = vim.keymap
+local api = vim.api
 
 -- Global option
 g.mapleader = ' '
@@ -30,6 +31,7 @@ cmd([[command! PackerCompile packadd packer.nvim | lua require('plugins').compil
 -- Keymaps --
 local opts = { noremap = true, silent = true }
 local interactive = { noremap = true }
+local expr = { noremap = true, expr = true }
 
 -- Utils
 keymap.set('n', '<C-m>', ':noh<CR>', opts)
@@ -59,6 +61,11 @@ keymap.set('n', '<leader><leader>q', ':q!<CR>', opts)
 keymap.set('n', '<leader><leader>Q', ':qa!<CR>', opts)
 keymap.set('n', 'te', ':tabe ', interactive)
 
+-- Yank control
+keymap.set('n', 's"', 'ci"')
+keymap.set('n', 'se', ':%s/<C-r>=expand("<cword>")<cr>/', interactive)
+
+
 -- Buffer control
 keymap.set('n', '<leader>q', ':bdelete<CR>', opts)
 keymap.set('n', 'H', ':bp<CR>', opts)
@@ -67,3 +74,14 @@ keymap.set('n', 'L', ':bnext<CR>', opts)
 -- QuickFix
 keymap.set('n', '<leader>cn', ':cnext<CR>', opts)
 keymap.set('n', '<leader>cp', ':cprev<CR>', opts)
+local qf_key_settings = function()
+  local onlyBuffer = { noremap = true, buffer = true }
+  keymap.set('n', '<CR>', ':.cc<CR>|:cclose<CR>', onlyBuffer)
+  keymap.set('n', 'o', ':.cc<CR>', onlyBuffer)
+end
+api.nvim_create_augroup('QfGroup', {})
+api.nvim_create_autocmd('FileType', {
+  group = 'QfGroup',
+  pattern = { 'qf' },
+  callback = qf_key_settings,
+})

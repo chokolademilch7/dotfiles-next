@@ -41,7 +41,8 @@ alt - a : yabai -m space --toggle padding && yabai -m space --toggle gap
 # toggle window fullscreen zoom
 alt - f : yabai -m window --toggle zoom-fullscreen
 # toggle window native fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+# shift + alt - f : yabai -m window --toggle native-fullscreen
+shift + alt - f : yabai -m display --toggle float 
 # toggle window split type
 alt - e : yabai -m window --toggle split
 # float / unfloat window and restore position
