@@ -44,3 +44,13 @@ luac.out
 *.x86_64
 *.hex
 
+# karabiner 
+**/karabiner/assets
+**/karabiner/automatic_backups
+
+# tmux
+**/tmux/plugins
+
+# lazygit
+**/lazygit/state.yml
+
