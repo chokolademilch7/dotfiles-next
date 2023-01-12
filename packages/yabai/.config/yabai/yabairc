@@ -2,7 +2,7 @@
 
 # global settings
 yabai -m config mouse_modifier               ctrl
-yabai -m config mouse_follows_focus          on
+yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off #autoraise
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
@@ -32,7 +32,8 @@ yabai -m config right_padding                12
 yabai -m config window_gap                   06
 
 # Compact Mode is 28px
-yabai -m config external_bar                 all:28:0
+# yabai -m config external_bar                 all:28:0
+yabai -m config external_bar                 all:34:0
 
 # Override gaps for space 2 only
 yabai -m config --space 2 window_gap 0
@@ -41,5 +42,10 @@ yabai -m config --space 2 window_gap 0
 yabai -m rule --add app="^Alacritty$" manage=off
 yabai -m rule --add app="^DeepL$" manage=off
 yabai -m rule --add app="^Alfred$" manage=off
+yabai -m rule --add app="^Slack$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Figma$" manage=off
+yabai -m rule --add app="^システム設定$" manage=off
 
 echo "yabai configuration loaded.."

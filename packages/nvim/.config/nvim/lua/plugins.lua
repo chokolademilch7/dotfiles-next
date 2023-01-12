@@ -132,9 +132,11 @@ local function init()
   use({
     'nvim-telescope/telescope.nvim',
     requires = {
+      { 'jvgrootveld/telescope-zoxide' },
       { 'nvim-telescope/telescope-file-browser.nvim' },
       { 'nvim-telescope/telescope-project.nvim' },
       { 'nvim-lua/plenary.nvim' },
+      { 'nvim-lua/popup.nvim' },
     },
     config = function()
       require('config.telescope')

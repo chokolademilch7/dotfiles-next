@@ -3,7 +3,7 @@ local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local opts = { noremap = true }
 local fb_actions = telescope.extensions.file_browser.actions
-local project = telescope.extensions.project
+-- local project = telescope.extensions.project
 
 vim.keymap.set('n', 'sF', builtin.find_files, opts)
 vim.keymap.set('n', 'sf', builtin.git_files, opts)
@@ -26,10 +26,17 @@ vim.keymap.set('n', 'sj', builtin.jumplist, opts)
 vim.keymap.set('n', 'sd', builtin.diagnostics, opts)
 vim.keymap.set('n', 'st', builtin.treesitter, opts)
 vim.keymap.set('n', 'sr', builtin.current_buffer_fuzzy_find, opts)
-vim.keymap.set('n', 'su', ':Telescope file_browser<CR>', opts)
-vim.keymap.set('n', 'so', function()
-  project.project({})
-end, opts)
+
+-- telescope-zoxide
+vim.keymap.set('n', 'so', telescope.extensions.zoxide.list, opts)
+
+-- telescope-file_browser
+vim.keymap.set('n', 'su', telescope.extensions.file_browser.file_browser, opts)
+
+-- telescope-project
+-- vim.keymap.set('n', 'so', function()
+--   project.project({})
+-- end, opts)
 
 telescope.setup({
   defaults = {
@@ -43,13 +50,40 @@ telescope.setup({
     },
   },
   extensions = {
+    zoxide = {
+      mappings = {
+        default = {
+          action = function(selection)
+            vim.cmd('cd ' .. selection.path)
+            builtin.git_files({ cwd = selection.path })
+          end,
+          after_action = function(selection)
+            print('Directory changed to ' .. selection.path)
+          end,
+        },
+        ['<C-b>'] = {
+          keepinsert = true,
+          action = function(selection)
+            telescope.extensions.file_browser.file_browser({ cwd = selection.path })
+          end,
+        },
+        ['<C-l>'] = {
+          keepinsert = true,
+          action = function(selection)
+            builtin.live_grep({
+              cwd = selection.path,
+            })
+          end,
+        },
+      },
+    },
     file_browser = {
       mappings = {
         ['n'] = {
-          ['<A-h>'] = fb_actions.goto_parent_dir,
+          ['<F12>'] = fb_actions.goto_parent_dir,
         },
         ['i'] = {
-          ['<A-h>'] = fb_actions.goto_parent_dir,
+          ['<F12>'] = fb_actions.goto_parent_dir,
           ['<C-h>'] = false,
           ['<C-.>'] = fb_actions.toggle_hidden,
         },
@@ -61,3 +95,4 @@ telescope.setup({
 -- you need to call load_extension, somewhere after setup function
 telescope.load_extension('file_browser')
 telescope.load_extension('project')
+telescope.load_extension('zoxide')
