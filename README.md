@@ -9,7 +9,7 @@ tmux init
 
 ## Additional Settings
 ### alt + tab
-systemsettings -> keyboard -> shortcut -> service -> next window ctl
+systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 
 `defaults write -g InitialKeyRepeat -int 11`
 
