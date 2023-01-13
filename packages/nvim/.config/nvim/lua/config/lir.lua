@@ -11,7 +11,7 @@ keymap.set('n', '<leader>f', float.init, opts)
 
 lir.setup({
   show_hidden_files = false,
-  devicons_enable = true,
+  devicons = { enable = true },
   mappings = {
     ['l'] = actions.edit,
     ['<C-h>'] = actions.split,
