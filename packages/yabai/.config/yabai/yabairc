@@ -39,13 +39,14 @@ yabai -m config external_bar                 all:34:0
 yabai -m config --space 2 window_gap 0
 
 # Rules
-yabai -m rule --add app="^Alacritty$" manage=off
-yabai -m rule --add app="^DeepL$" manage=off
-yabai -m rule --add app="^Alfred$" manage=off
-yabai -m rule --add app="^Slack$" manage=off
-yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
-yabai -m rule --add app="^Figma$" manage=off
-yabai -m rule --add app="^システム設定$" manage=off
+# yabai -m rule --add app="^Alacritty$" manage=off
+# yabai -m rule --add app="^DeepL$" manage=off
+# yabai -m rule --add app="^Alfred$" manage=off
+# yabai -m rule --add app="^Slack$" manage=off
+# yabai -m rule --add app="^Finder$" manage=off
+# yabai -m rule --add app="^Spotify$" manage=off
+# yabai -m rule --add app="^Figma$" manage=off
+# yabai -m rule --add app="^システム設定$" manage=off
+yabai -m rule --add app!="^Brave Browser$" manage=off
 
 echo "yabai configuration loaded.."
