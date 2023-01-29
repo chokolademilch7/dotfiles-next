@@ -12,7 +12,7 @@ parser_config.tsx.filetype_to_parsername = { 'javascript', 'typescript.tsx' }
 -- })
 
 treesitter.setup({
-  ensure_installed = 'maintained',
+  ensure_installed = { "typescript", "lua", "tsx", "markdown" },
   highlight = {
     enable = true,
     use_languagetree = true,
