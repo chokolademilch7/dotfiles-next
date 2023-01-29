@@ -2,7 +2,7 @@ local api = vim.api
 local opts = { noremap = true, silent = true }
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({
-  cmd = "CONFIG_DIR=$HOME/.config/lazygit lazygit",
+  cmd = "CONFIG_DIR=$HOME/.config/lazygit lazygit status",
   direction = 'float',
   hidden = true,
 })
