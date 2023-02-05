@@ -54,3 +54,5 @@ luac.out
 # lazygit
 **/lazygit/state.yml
 
+# brew bundle
+**/brew/Brewfile.lock.json
