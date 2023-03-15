@@ -47,6 +47,7 @@ yabai -m config --space 2 window_gap 0
 # yabai -m rule --add app="^Spotify$" manage=off
 # yabai -m rule --add app="^Figma$" manage=off
 # yabai -m rule --add app="^システム設定$" manage=off
-yabai -m rule --add app!="^Brave Browser$" manage=off
+# yabai -m rule --add app!="^Brave Browser$" manage=off
+yabai -m rule --add app!="^Microsoft Edge Dev$" manage=off
 
 echo "yabai configuration loaded.."
