@@ -46,7 +46,7 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
-lspconfig['sumneko_lua'].setup({
+lspconfig['lua_ls'].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
