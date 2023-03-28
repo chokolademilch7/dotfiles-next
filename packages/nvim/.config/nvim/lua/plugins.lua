@@ -62,6 +62,14 @@ local function init()
     end,
   })
 
+  -- QuickFix
+  use({
+    'ten3roberts/qf.nvim',
+    config = function()
+      require('config.qf')
+    end,
+  })
+
   -- CMP
   use({
     'hrsh7th/nvim-cmp',
