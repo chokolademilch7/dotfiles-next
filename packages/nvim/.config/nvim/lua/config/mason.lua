@@ -9,5 +9,5 @@ mason.setup({
   },
 })
 masonLspconfig.setup({
-  ensure_installed = { 'sumneko_lua', 'tsserver', 'tailwindcss', 'gopls', 'bashls', 'eslint', 'jsonls', 'emmet_ls' },
+  ensure_installed = { 'lua_ls', 'tsserver', 'tailwindcss', 'gopls', 'bashls', 'eslint', 'jsonls', 'emmet_ls' },
 })
