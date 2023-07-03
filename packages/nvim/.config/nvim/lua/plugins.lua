@@ -38,7 +38,6 @@ local function init()
   })
   use({
     'mxsdev/symbols-outline.nvim',
-    branch = 'merge-jsx-tree',
     config = function()
       require('config.outline')
     end,
@@ -57,6 +56,7 @@ local function init()
   })
   use({
     'j-hui/fidget.nvim',
+    tag = 'legacy',
     config = function()
       require('config.fidget')
     end,
@@ -95,6 +95,7 @@ local function init()
   })
   use({
     'nvim-lualine/lualine.nvim',
+    after = 'github-nvim-theme',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function()
       require('config.lualine')
@@ -258,6 +259,31 @@ local function init()
     requires = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
       require('config.indent-blankline')
+    end,
+  })
+
+  -- AI Asistant Tools
+  use({
+    'github/copilot.vim',
+    config = function()
+      require('config.copilot')
+    end,
+  })
+  use({
+    'jackMort/ChatGPT.nvim',
+    config = function()
+      require('config.chatGPT')
+    end,
+    requires = {
+      'MunifTanjim/nui.nvim',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+    },
+  })
+  use({
+    'dense-analysis/neural',
+    config = function()
+      require('config.neural')
     end,
   })
 end
