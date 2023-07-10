@@ -272,9 +272,6 @@ local function init()
   -- AI Asistant Tools
   use({
     'github/copilot.vim',
-    config = function()
-      require('config.copilot')
-    end,
   })
   use({
     'jackMort/ChatGPT.nvim',
