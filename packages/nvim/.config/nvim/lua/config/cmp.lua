@@ -15,6 +15,20 @@ cmp.setup({
     --     fallback()
     --   end
     -- end,
+    ['<C-p>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
+    ['<C-n>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
     ['<F12>'] = function()
       if cmp.visible() then
         cmp.abort()
