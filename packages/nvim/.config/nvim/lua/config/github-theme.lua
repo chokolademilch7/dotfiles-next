@@ -1,18 +1,21 @@
 local githubTheme = require('github-theme')
 
 githubTheme.setup({
-  theme_style = 'dark',
-  transparent = true,
-  overrides = function(_)
-    return {
+  options = {
+    transparent = true,
+  },
+  groups = {
+    all = {
       CursorLine = {
         fg = 'none',
         bg = 'none',
         style = 'underline',
       },
       NormalFloat = {
-        bg = 'none'
-      }
-    }
-  end,
+        bg = 'none',
+      },
+    },
+  },
 })
+
+vim.cmd.colorscheme('github_dark')
