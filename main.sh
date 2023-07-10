@@ -1,4 +1,7 @@
 #! /bin/bash
+if ! type brew >/dev/null 2>&1; then
+  echo "brew is not installed."
+fi
 if type stow >/dev/null 2>&1; then
   echo "stow is already installed."
   echo "Are you ready ? We're ready for you. y/N"
