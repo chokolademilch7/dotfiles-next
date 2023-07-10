@@ -4,3 +4,4 @@ lualine.setup({
     theme = 'github_dark',
   },
 })
+
