@@ -9,7 +9,7 @@ g.mapleader = ' '
 
 -- Option --
 opt.number = true
-opt.scrolloff = 5
+opt.scrolloff = 10
 opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
@@ -63,7 +63,7 @@ keymap.set('n', 'te', ':tabe ', interactive)
 
 -- Yank control
 keymap.set('n', 's"', 'ci"')
-keymap.set('n', 'se', ':%s/<C-r>=expand("<cword>")<cr>/', interactive)
+keymap.set('n', 'se', ':s/<C-r>=expand("<cword>")<cr>/', interactive)
 
 
 -- Buffer control

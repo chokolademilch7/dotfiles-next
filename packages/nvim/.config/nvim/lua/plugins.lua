@@ -261,6 +261,13 @@ local function init()
       require('config.indent-blankline')
     end,
   })
+  -- the simple clone of the plugin vim-fugitive which is written in Lua.
+  use({
+    'dinhhuy258/git.nvim',
+    config = function()
+      require('config.git')
+    end,
+  })
 
   -- AI Asistant Tools
   use({
