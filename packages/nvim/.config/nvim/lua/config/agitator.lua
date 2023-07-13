@@ -2,7 +2,6 @@ local agitator = require('agitator')
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set('n', '<leader>gl', agitator.git_blame_toggle, opts)
 keymap.set('n', '<leader>gl', function()
   agitator.git_blame_toggle({
     sidebar_width = 45,
@@ -13,15 +12,10 @@ keymap.set('n', '<leader>gl', function()
       else
         summaryMessage = r.summary
       end
-      return string.format(
-        '%02d-%02d-%02d | %s | %s',
-        r.date.year,
-        r.date.month,
-        r.date.day,
-        r.author,
-        summaryMessage
-      )
+      return string.format('%02d-%02d-%02d | %s | %s', r.date.year, r.date.month, r.date.day, r.author, summaryMessage)
     end,
   })
 end, opts)
 keymap.set('n', '<leader>gt', agitator.git_time_machine, opts)
+keymap.set('n', '<leader>gf', agitator.open_file_git_branch, opts)
+keymap.set('n', '<leader>gF', agitator.search_git_branch, opts)
