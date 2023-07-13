@@ -50,6 +50,7 @@ local function init()
   })
   use({
     'folke/trouble.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require('config.trouble')
     end,
@@ -96,7 +97,7 @@ local function init()
   use({
     'nvim-lualine/lualine.nvim',
     after = 'github-nvim-theme',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       require('config.lualine')
     end,
