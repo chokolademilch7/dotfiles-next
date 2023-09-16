@@ -45,7 +45,8 @@ telescope.setup({
       prompt_position = 'top',
     },
     mappings = {
-      i = { ['<C-t>'] = trouble.open_with_trouble, ['<C-o>'] = 'which_key' },
+      i = { ['<C-t>'] = trouble.open_with_trouble, ['<C-o>'] = 'which_key',
+    },
       n = { ['<C-t>'] = trouble.open_with_trouble },
     },
   },

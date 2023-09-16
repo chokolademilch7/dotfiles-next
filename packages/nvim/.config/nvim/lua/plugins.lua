@@ -81,6 +81,14 @@ local function init()
   })
   use({ 'L3MON4D3/LuaSnip', run = 'make install_jsregexp' })
 
+  -- JSON
+  use({
+    'mogelbrod/vim-jsonpath',
+    config = function()
+      require('config.jsonpath')
+    end,
+  })
+
   -- Theme
   use({
     'nvim-treesitter/nvim-treesitter',
@@ -286,11 +294,17 @@ local function init()
     },
   })
   use({
-    'dense-analysis/neural',
+    'aduros/ai.vim',
     config = function()
-      require('config.neural')
+      require('config.ai')
     end,
   })
+  -- use({
+  --   'dense-analysis/neural',
+  --   config = function()
+  --     require('config.neural')
+  --   end,
+  -- })
 end
 
 local plugins = setmetatable({}, {

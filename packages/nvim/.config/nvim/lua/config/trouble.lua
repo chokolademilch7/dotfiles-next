@@ -9,4 +9,13 @@ keymap.set('n', '<leader>xl', '<cmd>TroubleToggle loclist<cr>', opts)
 keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', opts)
 keymap.set('n', 'gR', '<cmd>TroubleToggle lsp_references<cr>', opts)
 
-trouble.setup({})
+trouble.setup({
+  icons = true,
+  signs = {
+    error = '',
+    warning = '',
+    hint = '',
+    information = '',
+    other = '﫠'
+  },
+})

@@ -1,0 +1,7 @@
+multigrid = true
+vsync = true
+maximized = false
+srgb = false
+idle = false
+neovim_bin = "/usr/bin/nvim"
+frame = "Buttonless"

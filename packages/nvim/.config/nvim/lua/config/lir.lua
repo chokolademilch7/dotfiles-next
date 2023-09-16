@@ -38,6 +38,7 @@ lir.setup({
     ['p'] = clipboard_actions.paste,
   },
   float = {
+    -- winblend = 40,
     winblend = 0,
     curdir_window = {
       enable = false,

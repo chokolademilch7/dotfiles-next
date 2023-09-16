@@ -14,6 +14,7 @@ if type stow >/dev/null 2>&1; then
     stow -d ./packages -t $HOME tmux
     stow -d ./packages -t $HOME alacrity
     stow -d ./packages -t $HOME starship
+    stow -d ./packages -t $HOME neovide
     echo "Success!!"
   elif [ $input = "n" ] || [ $input = "no" ]; then
     echo "See you later."

@@ -17,8 +17,8 @@ opt.shiftwidth = 2
 opt.splitright = true
 opt.clipboard = 'unnamedplus'
 opt.cursorline = true
--- opt.winblend = 20
-opt.winblend = 95
+opt.winblend = 20
+opt.pumblend = 20
 opt.ignorecase = true
 opt.termguicolors = true
 opt.autochdir = true
@@ -30,19 +30,25 @@ if vim.g.neovide then
     return string.format('%x', math.floor(255 * g.transparency or 0.8))
   end
   -- global options
-  g.neovide_transparency = 0.0
+  g.neovide_transparency = 0.4
   g.transparency = 0.8
   g.neovide_background_color = '#0f1117' .. alpha()
-  g.neovide_floating_blur_amount_x = 6.0
-  g.neovide_floating_blur_amount_y = 6.0
+  g.neovide_floating_blur_amount_x = 2.0
+  g.neovide_floating_blur_amount_y = 2.0
+  g.neovide_cursor_vfx_mode = 'railgun'
+  g.neovide_cursor_animation_length = 0.05
+  g.neovide_cursor_trail_length = 0.05
+  g.neovide_cursor_trail_size = 0.5
+
+  local opts = { noremap = true, silent = true }
 
   -- keymaps
-  keymap.set('n', '<D-s>', ':w<CR>')      -- Save
-  keymap.set('v', '<D-c>', '"+y')         -- Copy
-  keymap.set('n', '<D-v>', '"+P')         -- Paste normal mode
-  keymap.set('v', '<D-v>', '"+P')         -- Paste visual mode
-  keymap.set('c', '<D-v>', '<C-R>+')      -- Paste command mode
-  keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+  keymap.set('n', '<D-s>', ':w<CR>', opts) -- Save
+  keymap.set('v', '<D-c>', '"+y', opts) -- Copy
+  keymap.set('n', '<D-v>', '"+P', opts) -- Paste normal mode
+  keymap.set('v', '<D-v>', '"+P', opts) -- Paste visual mode
+  keymap.set('c', '<D-v>', '<C-R>+', opts) -- Paste command mode
+  keymap.set('i', '<D-v>', '<ESC>l"+Pli', opts) -- Paste insert mode
 end
 
 -- Commands --
