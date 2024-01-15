@@ -25,15 +25,15 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   06
+yabai -m config top_padding                  08
+yabai -m config bottom_padding               08
+yabai -m config left_padding                 08
+yabai -m config right_padding                08
+yabai -m config window_gap                   02
 
 # Compact Mode is 28px
-# yabai -m config external_bar                 all:28:0
-yabai -m config external_bar                 all:34:0
+yabai -m config external_bar                 all:28:0
+# yabai -m config external_bar                 all:34:0
 
 # Override gaps for space 2 only
 yabai -m config --space 2 window_gap 0
