@@ -43,11 +43,11 @@ if vim.g.neovide then
   local opts = { noremap = true, silent = true }
 
   -- keymaps
-  keymap.set('n', '<D-s>', ':w<CR>', opts) -- Save
-  keymap.set('v', '<D-c>', '"+y', opts) -- Copy
-  keymap.set('n', '<D-v>', '"+P', opts) -- Paste normal mode
-  keymap.set('v', '<D-v>', '"+P', opts) -- Paste visual mode
-  keymap.set('c', '<D-v>', '<C-R>+', opts) -- Paste command mode
+  keymap.set('n', '<D-s>', ':w<CR>', opts)      -- Save
+  keymap.set('v', '<D-c>', '"+y', opts)         -- Copy
+  keymap.set('n', '<D-v>', '"+P', opts)         -- Paste normal mode
+  keymap.set('v', '<D-v>', '"+P', opts)         -- Paste visual mode
+  keymap.set('c', '<D-v>', '<C-R>+', opts)      -- Paste command mode
   keymap.set('i', '<D-v>', '<ESC>l"+Pli', opts) -- Paste insert mode
 end
 
@@ -78,6 +78,16 @@ keymap.set('i', '<C-a>', '<Home>', opts)
 keymap.set('i', '<C-e>', '<End>', opts)
 keymap.set('i', '<C-d>', '<Del>', opts)
 keymap.set('i', '<C-k>', '<Esc><Right>C', opts)
+
+---- command line
+keymap.set('c', '<C-p>', '<Up>', opts)
+keymap.set('c', '<C-n>', '<Down>', opts)
+keymap.set('c', '<C-b>', '<Left>', opts)
+keymap.set('c', '<C-f>', '<Right>', opts)
+keymap.set('c', '<C-a>', '<Home>', opts)
+keymap.set('c', '<C-e>', '<End>', opts)
+keymap.set('c', '<C-d>', '<Del>', opts)
+keymap.set('c', '<C-k>', '<Esc><Right>C', opts)
 
 -- Windows control
 keymap.set('n', '<leader>2', ':split<CR>', opts)
