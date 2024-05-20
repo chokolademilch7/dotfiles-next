@@ -12,7 +12,7 @@ if type stow >/dev/null 2>&1; then
     stow -d ./packages -t $HOME yabai
     stow -d ./packages -t $HOME skhd
     stow -d ./packages -t $HOME tmux
-    stow -d ./packages -t $HOME alacrity
+    stow -d ./packages -t $HOME alacritty
     stow -d ./packages -t $HOME starship
     stow -d ./packages -t $HOME neovide
     echo "Success!!"
