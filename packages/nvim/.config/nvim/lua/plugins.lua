@@ -57,7 +57,6 @@ local function init()
   })
   use({
     'j-hui/fidget.nvim',
-    tag = 'legacy',
     config = function()
       require('config.fidget')
     end,
@@ -223,13 +222,13 @@ local function init()
       require('nvim-ts-autotag').setup()
     end,
   })
-  use({
-    'kevinhwang91/nvim-ufo',
-    requires = { 'kevinhwang91/promise-async' },
-    config = function()
-      require('config.ufo')
-    end,
-  })
+  -- use({
+  --   'kevinhwang91/nvim-ufo',
+  --   requires = { 'kevinhwang91/promise-async' },
+  --   config = function()
+  --     require('config.ufo')
+  --   end,
+  -- })
 
   -- Git
   -- signs
@@ -252,17 +251,17 @@ local function init()
       require('config.diffview')
     end,
   })
-  use({
-    'pwntester/octo.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-      'kyazdani42/nvim-web-devicons',
-    },
-    config = function()
-      require('octo').setup()
-    end,
-  })
+  -- use({
+  --   'pwntester/octo.nvim',
+  --   requires = {
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-telescope/telescope.nvim',
+  --     'kyazdani42/nvim-web-devicons',
+  --   },
+  --   config = function()
+  --     require('octo').setup()
+  --   end,
+  -- })
   use({
     'lukas-reineke/indent-blankline.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' },

@@ -3,6 +3,7 @@ local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local opts = { noremap = true }
 local fb_actions = telescope.extensions.file_browser.actions
+local ts_actions = require('telescope.actions')
 -- local project = telescope.extensions.project
 
 vim.keymap.set('n', 'sF', builtin.find_files, opts)
@@ -45,9 +46,17 @@ telescope.setup({
       prompt_position = 'top',
     },
     mappings = {
-      i = { ['<C-t>'] = trouble.open_with_trouble, ['<C-o>'] = 'which_key',
-    },
+      i = { ['<C-t>'] = trouble.open_with_trouble, ['<C-o>'] = 'which_key' },
       n = { ['<C-t>'] = trouble.open_with_trouble },
+    },
+  },
+  pickers = {
+    buffers = {
+      mappings = {
+        i = {
+          ['<c-d>'] = ts_actions.delete_buffer,
+        },
+      },
     },
   },
   extensions = {

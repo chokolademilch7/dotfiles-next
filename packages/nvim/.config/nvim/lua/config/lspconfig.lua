@@ -78,6 +78,12 @@ lspconfig['gopls'].setup({
 lspconfig['bashls'].setup({
   on_attach = on_attach,
 })
+lspconfig['terraform_lsp'].setup({
+  on_attach = on_attach,
+})
+lspconfig['biome'].setup({
+  on_attach = on_attach,
+})
 -- lspconfig['yamlls'].setup({
 --   filetypes = { 'yaml', 'yml' },
 -- })
