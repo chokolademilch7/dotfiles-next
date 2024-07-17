@@ -1,4 +1,4 @@
-local trouble = require('trouble.providers.telescope')
+local trouble = require('trouble.sources.telescope')
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local opts = { noremap = true }
@@ -46,8 +46,8 @@ telescope.setup({
       prompt_position = 'top',
     },
     mappings = {
-      i = { ['<C-t>'] = trouble.open_with_trouble, ['<C-o>'] = 'which_key' },
-      n = { ['<C-t>'] = trouble.open_with_trouble },
+      i = { ['<C-t>'] = trouble.open, ['<C-o>'] = 'which_key' },
+      n = { ['<C-t>'] = trouble.open },
     },
   },
   pickers = {
