@@ -4,8 +4,9 @@ https://github.com/wbthomason/packer.nvim#quickstart
 → `<leader><leader>z`
 
 tmux init
-1. tmux pane open
-2. `M-o I`
+1. https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation
+2. tmux pane open
+3. `M-o I`
 
 ## Additional Settings
 ### alt + tab
