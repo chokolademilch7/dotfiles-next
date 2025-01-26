@@ -12,6 +12,7 @@ if type stow >/dev/null 2>&1; then
   if [ $input = "y" ] || [ $input = "yes" ]; then
     stow -d $STOW_PACKAGES_DIR -t $HOME zsh
     stow -d $STOW_PACKAGES_DIR -t $HOME karabiner
+    stow -d $STOW_PACKAGES_DIR -t $HOME nix
     stow -d $STOW_PACKAGES_DIR -t $HOME nvim
     stow -d $STOW_PACKAGES_DIR -t $HOME lazygit
     stow -d $STOW_PACKAGES_DIR -t $HOME yabai
