@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/zsh
 
 STOW_PACKAGES_DIR="./packages"
 

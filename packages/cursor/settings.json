@@ -1,0 +1,297 @@
+{
+  "terminal.integrated.stickyScroll.enabled": false,
+  "vim.leader": "<space>",
+  // user-keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeEditorInAllGroups"]
+    },
+    {
+      "before": ["leader", "k", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["leader", "2"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["leader", "3"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusNextGroup"]
+    },
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusPreviousGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commnads": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.openNextRecentlyUsedEditorInGroup"]
+    },
+    {
+      "before": ["leader", "e", "j"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["leader", "e", "k"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["leader", "s"],
+      "after": ["leader", "leader", "s"]
+    },
+    {
+      "before": ["s", "h"],
+      "commands": ["workbench.action.openPreviousEditorFromHistory"]
+    },
+    {
+      "before": ["g", "k", "l"],
+      "commands": ["editor.action.revealDefinitionAside"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["references-view.findReferences"]
+    },
+    {
+      "before": ["s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["leader", "c", "n"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["leader", "c", "p"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
+      "before": ["leader", "k", "e"],
+      "commands": ["eslint.executeAutofix"]
+    },
+    {
+      "before": ["leader", "f"],
+      "commands": ["breadcrumbs.toggleToOn"]
+    },
+    {
+      "before": ["leader", "g", "l"],
+      "commands": ["gitlens.toggleFileBlame"]
+    },
+    {
+      "before": ["g", "e"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["leader", "o"],
+      "commands": ["outline.focus"]
+    },
+    {
+      "before": ["leader", "g", "j"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    {
+      "before": ["leader", "g", "k"],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["s", "r"],
+      "commands": ["swiper.swiper-word-at-cursor"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["s", "b"],
+      "commands": ["bookmarks.list"]
+    },
+    {
+      "before": ["s", "b"],
+      "commands": ["bookmarks.list"]
+    },
+    {
+      "before": ["s", "v"],
+      "commands": ["bookmarks.listFromAllFiles"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // 候補トリガーと干渉してしまう
+    // {
+    //   "before": [
+    //     "ctrl+n"
+    //   ],
+    //   "commands": [
+    //     "cursorDown"
+    //   ],
+    // },
+    // {
+    //   "before": [
+    //     "ctrl+p"
+    //   ],
+    //   "commands": [
+    //     "cursorUp"
+    //   ]
+    // },
+    {
+      "before": ["ctrl+e"],
+      "commands": ["cursorEnd"]
+    },
+    {
+      "before": ["ctrl+a"],
+      "commands": ["cursorHome"]
+    },
+    {
+      "before": ["ctrl+l"],
+      "commands": ["editor.action.triggerSuggest"]
+    },
+    {
+      "before": ["ctrl+k"],
+      "commands": ["deleteAllRight"]
+    }
+  ],
+  "workbench.startupEditor": "none",
+  "vim.easymotion": true,
+  "editor.fontFamily": "PlemolJP35 Console NF",
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/opt/homebrew/bin/nvim",
+  "highlightLine.borderWidth": "1.2px",
+  "highlightLine.borderColor": "#FFFFFF",
+  "highlightLine.borderStyle": "outset",
+  "terminal.integrated.macOptionIsMeta": true,
+  // "workbench.activityBar.location": "hidden",
+  "editor.minimap.autohide": true,
+  "workbench.layoutControl.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "gitlens.graph.minimap.additionalTypes": ["tags"],
+  "editor.fontLigatures": true,
+  "editor.codeLensFontFamily": "PlemolJP35 Console NF",
+  "workbench.fontAliasing": "antialiased",
+  "git.autofetch": true,
+  "window.density.editorTabHeight": "compact",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "vim.useSystemClipboard": true,
+  // "deepl.formality": "default",
+  // "deepl.tagHandling": "off",
+  // "deepl.splitSentences": "1",
+  // "deepl.translationMode": "Replace",
+  // "deepl.defaultSourceLanguage": "EN-US",
+  // "deepl.defaultTargetLanguage": "JA",
+  "git.confirmSync": false,
+  "terminal.integrated.fontFamily": "PlemolJP35 Console NF",
+  "breadcrumbs.symbolSortOrder": "type",
+  "editor.inlayHints.enabled": "off",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "editor.wordWrap": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "window.commandCenter": false,
+  "window.title": "${rootName}${separator}${activeEditorMedium}${separator}${profileName}",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "apc.electron": {
+    "frame": false
+  },
+  // "apc.stylesheet": {
+    // panelのタイトルバーを非表示にする
+    // "#workbench\\.parts\\.panel > div.composite.title": "display: none;"
+    // sidebarを非表示にする
+    // "#workbench\\.parts\\.sidebar > div.composite.title": "display: none;"
+  // },
+  // "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 1 (Super gradients)",
+  "workbench.iconTheme": "catppuccin-perfect-latte",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "workbench.activityBar.orientation": "vertical",
+  "editor.accessibilitySupport": "off",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select com.google.inputmethod.Japanese.Roman",
+  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "args": ["new-session", "-A", "-s", "vscode:${workspaceFolder}"],
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powersh"
+    }
+  },
+  "githubPullRequests.fileListLayout": "tree",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.mode": "manual",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "Openapi",
+    "tanstack"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.cursorBlinking": "solid",
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor.general.gitGraphIndexing": "enabled",
+  "deno.path": "/Users/test/.local/share/mise/installs/deno/latest/bin/deno",
+  "cursor.composer.collapsePaneInputBoxPills": true,
+  "cursor.chat.collapseInputBoxPills": true,
+  "cursor.cmdk.useThemedDiffBackground": true,
+  "cursor.diffs.useCharacterLevelDiffs": true,
+  "cursor.terminal.usePreviewBox": true,
+  "cursor.composer.renderPillsInsteadOfBlocks": true
+}
