@@ -1,0 +1,21 @@
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# wigets
+function jump_zoxide() {
+  zi
+  zle reset-prompt
+}
+zle -N jump_zoxide
+
+function jump_ghq () {
+  cd $(ghq list -p | fzf-tmux --reverse)
+  zle reset-prompt
+}
+zle -N jump_ghq
+
+# keybindings
+bindkey -e
+bindkey '^o^o' jump_zoxide
+bindkey '^g' jump_ghq
+

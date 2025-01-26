@@ -1,0 +1,12 @@
+# alias
+alias co=code-insiders
+alias cu=cursor
+alias t=tmux
+alias g=git
+alias ga="current-gh-auth"
+alias ls=lsd
+alias la="lsd -la"
+alias ll="lsd -l"
+alias lla="lsd -lla"
+alias lg="lazygit --use-config-file=$HOME/.config/lazygit/config.yml"
+alias lgs="lazygit --use-config-file=$HOME/.config/lazygit/config.yml --status"
