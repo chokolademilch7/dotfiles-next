@@ -8,7 +8,7 @@ if type stow >/dev/null 2>&1; then
   echo "Are you ready ? We're ready for you. y/N"
   read input
   if [ $input = "y" ] || [ $input = "yes" ]; then
-    stow -d $STOW_PACKAGES_DIR -t $HOME $APPLICATION_DIR/Cursor cursor
+    stow -d $STOW_PACKAGES_DIR -t $APPLICATION_DIR/Cursor cursor
     echo "Success!!"
   elif [ $input = "n" ] || [ $input = "no" ]; then
     echo "See you later."
