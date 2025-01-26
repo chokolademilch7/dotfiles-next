@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "bbenoist.nix",
+    "bradlc.vscode-tailwindcss",
+    "christian-kohler.path-intellisense",
+    "cliffordfajardo.highlight-line-vscode",
+    "dbaeumer.vscode-eslint",
+    "denoland.vscode-deno",
+    "drcika.apc-extension",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "github.copilot",
+    "github.copilot-chat",
+    "github.github-vscode-theme",
+    "github.vscode-pull-request-github",
+    "gruntfuggly.todo-tree",
+    "leodevbro.blockman",
+    "ms-ceintl.vscode-language-pack-ja",
+    "ms-playwright.playwright",
+    "openai.openai-chatgpt-adhoc",
+    "orta.vscode-jest",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "thang-nm.catppuccin-perfect-icons",
+    "vscodevim.vim",
+    "wallabyjs.quokka-vscode",
+    "zxh404.vscode-proto3"
+  ]
+}
