@@ -12,13 +12,14 @@ notARepository: 'quit'
 keybinding:
   universal:
     copyToClipboard: 'Y'
-customCommands:
-  - key: 'o'
-    context: 'localBranches'
-    command: 'gh pr create -H {{ .SelectedLocalBranch.Name }}'
-    description: 'create PR with current branch'
-    subprocess: true
-  - key: 'O'
-    context: 'localBranches'
-    command: 'gh pr view -w'
-    description: 'view PR with current branch'
+# customCommands:
+#   - key: 'o'
+#     context: 'localBranches'
+#     command: 'gh pr create -H {{ .SelectedLocalBranch.Name }}'
+#     description: 'create PR with current branch'
+#     subprocess: true
+#   - key: 'O'
+#     context: 'localBranches'
+#     command: 'gh pr view -w'
+#     description: 'view PR with current branch'
+#     subprocess: true
