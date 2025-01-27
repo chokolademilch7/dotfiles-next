@@ -1,8 +1,8 @@
 # import settings files
-source ./zsh/.zshrc.init
-source ./zsh/.zshrc.alias
-source ./zsh/.zshrc.secret
-source ./zsh/.zshrc.keybind
+source $HOME/.zsh/.zshrc.init
+source $HOME/.zsh/.zshrc.alias
+source $HOME/.zsh/.zshrc.secret
+source $HOME/.zsh/.zshrc.keybind
 
 # define
 export TERM=tmux-256color
