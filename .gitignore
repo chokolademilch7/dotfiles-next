@@ -44,6 +44,9 @@ luac.out
 *.x86_64
 *.hex
 
+# secret
+*.secret
+
 # karabiner 
 **/karabiner/assets
 **/karabiner/automatic_backups
