@@ -4,7 +4,7 @@
   home.username = "test";
   home.homeDirectory = "/Users/test";
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.packages = [
     pkgs.wget
@@ -25,8 +25,6 @@
     pkgs.delta
     pkgs.gh
     pkgs.ghq
-    pkgs.yabai
-    pkgs.skhd
     pkgs.terminal-notifier
     pkgs.plemoljp
     pkgs.plemoljp-nf
@@ -34,9 +32,15 @@
   ];
 
   home.file = {
+    # nix
+    ".config/nix/nix.conf".source = ../packages/nix/.config/nix/nix.conf;
+
     # zsh
     ".zshrc".source = ../packages/zsh/.zshrc;
     ".zsh".source = ../packages/zsh/.zsh;
+
+    # starship
+    ".config/starship.toml".source = ../packages/starship/.config/starship.toml;
     
     # karabiner
     ".config/karabiner/karabiner.json".source = ../packages/karabiner/.config/karabiner/karabiner.json;
@@ -47,20 +51,11 @@
     # lazygit
     ".config/lazygit".source = ../packages/lazygit/.config/lazygit;
     
-    # yabai
-    ".config/yabai".source = ../packages/yabai/.config/yabai;
-    
-    # skhd
-    ".config/skhd".source = ../packages/skhd/.config/skhd;
-    
     # tmux
-    ".tmux.conf".source = ../packages/tmux/.tmux.conf;
+    ".config/tmux/tmux.conf".source = ../packages/tmux/.config/tmux/tmux.conf;
     
-    # alacritty
-    ".config/alacritty".source = ../packages/alacritty/.config/alacritty;
-    
-    # starship
-    ".config/starship.toml".source = ../packages/starship/.config/starship.toml;
+    # # alacritty
+    ".config/alacritty/alacritty.toml".source = ../packages/alacritty/.config/alacritty/alacritty.toml;
     
   };
 
