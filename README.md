@@ -19,6 +19,6 @@ systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 ## Experimental
 ### Use Nix flake + Home Manager
 ```
-nix run github:nix-community/home-manager/release -- switch
+nix run github:nix-community/home-manager -- switch --experimental-features "nix-command flakes"
 ```
 
