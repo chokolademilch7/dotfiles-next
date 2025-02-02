@@ -277,10 +277,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.userWords": [
-    "Openapi",
-    "tanstack"
-  ],
+  "cSpell.userWords": ["Openapi", "tanstack"],
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.cursorBlinking": "solid",
   "cursor.cpp.enablePartialAccepts": true,
@@ -295,4 +292,9 @@
   "window.titleBarStyle": "custom",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format. If the other logs are in English, describe them in English, if they are in Japanese, describe them in Japanese, according to the surrounding style."
+    }
+  ]
 }
