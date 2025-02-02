@@ -184,7 +184,6 @@
   "terminal.integrated.macOptionIsMeta": true,
   // "workbench.activityBar.location": "hidden",
   "editor.minimap.autohide": true,
-  "workbench.layoutControl.enabled": false,
   "githubPullRequests.pullBranch": "never",
   "gitlens.graph.minimap.additionalTypes": ["tags"],
   "editor.fontLigatures": true,
@@ -214,16 +213,15 @@
   "editor.guides.bracketPairs": false,
   "window.commandCenter": false,
   "window.title": "${rootName}${separator}${activeEditorMedium}${separator}${profileName}",
-  "window.titleBarStyle": "native",
-  "window.customTitleBarVisibility": "never",
-  "apc.electron": {
-    "frame": false
-  },
+  // "apc.electron": {
+  //   "frame": false,
+  //   "opacity": 0.9
+  // },
   // "apc.stylesheet": {
-    // panelのタイトルバーを非表示にする
-    // "#workbench\\.parts\\.panel > div.composite.title": "display: none;"
-    // sidebarを非表示にする
-    // "#workbench\\.parts\\.sidebar > div.composite.title": "display: none;"
+  //   // panelのタイトルバーを非表示にする
+  //   "#workbench\\.parts\\.panel > div.composite.title": "display: none;",
+  //   // sidebarを非表示にする
+  //   "#workbench\\.parts\\.sidebar > div.composite.title": "display: none;"
   // },
   // "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 1 (Super gradients)",
   "workbench.iconTheme": "catppuccin-perfect-latte",
@@ -289,9 +287,12 @@
   "cursor.general.gitGraphIndexing": "enabled",
   "deno.path": "/Users/test/.local/share/mise/installs/deno/latest/bin/deno",
   "cursor.composer.collapsePaneInputBoxPills": true,
-  "cursor.chat.collapseInputBoxPills": true,
   "cursor.cmdk.useThemedDiffBackground": true,
   "cursor.diffs.useCharacterLevelDiffs": true,
   "cursor.terminal.usePreviewBox": true,
-  "cursor.composer.renderPillsInsteadOfBlocks": true
+  "cursor.composer.renderPillsInsteadOfBlocks": true,
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "custom",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
 }

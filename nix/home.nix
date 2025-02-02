@@ -65,4 +65,11 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Home Manager のアクティベーション時に zcompile を実行する
+  home.activation.zcompile = ''
+    echo "zcompile を実行中..."
+    # zsh シェルで zcompile を実行
+    /bin/zsh -c 'zcompile $HOME/.zshrc'
+  '';
 }
