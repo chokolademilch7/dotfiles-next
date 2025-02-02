@@ -15,3 +15,10 @@ systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 `defaults write -g InitialKeyRepeat -int 11`
 
 `defaults write -g KeyRepeat -int 1`
+
+## Experimental
+### Use Nix flake + Home Manager
+```
+nix run github:nix-community/home-manager/release -- switch
+```
+
