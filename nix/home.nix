@@ -7,6 +7,9 @@
   home.stateVersion = "25.05";
 
   home.packages = [
+    pkgs.zsh
+    pkgs.curl
+    pkgs.git
     pkgs.wget
     pkgs.stow
     pkgs.tmux
@@ -67,9 +70,11 @@
   programs.home-manager.enable = true;
 
   # Home Manager のアクティベーション時に zcompile を実行する
-  home.activation.zcompile = ''
-    echo "zcompile を実行中..."
-    # zsh シェルで zcompile を実行
-    /bin/zsh -c 'zcompile $HOME/.zshrc'
-  '';
+  home.activation = {
+    zcompile = ''
+      set -e
+      echo "zcompile を実行中..."
+      ${pkgs.zsh}/bin/zsh -c "zcompile $HOME/.zshrc"
+    '';
+  };
 }
