@@ -134,7 +134,10 @@
     {
       "before": ["s", "v"],
       "commands": ["bookmarks.listFromAllFiles"]
-    }
+    },
+    { "before": ["<leader>", "<leader>", "c"],
+      "commands": ["cursor.generateGitCommitMessage"]
+   }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     // 候補トリガーと干渉してしまう
