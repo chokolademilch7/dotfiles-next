@@ -12,3 +12,4 @@ alias lg="lazygit --use-config-file=$HOME/.config/lazygit/config.yml"
 alias lgs="lazygit --use-config-file=$HOME/.config/lazygit/config.yml status"
 alias lgl="lazygit --use-config-file=$HOME/.config/lazygit/config.yml log"
 alias hm=home-manager
+alias x="xplr"

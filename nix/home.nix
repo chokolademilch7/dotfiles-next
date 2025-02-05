@@ -31,6 +31,7 @@
     pkgs.plemoljp-nf
     pkgs.plemoljp-hs
     pkgs.mise
+    pkgs.xplr
   ];
 
   home.file = {
