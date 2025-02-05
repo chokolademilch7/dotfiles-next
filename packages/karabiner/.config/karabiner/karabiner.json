@@ -209,7 +209,7 @@
                     ]
                 }
             ],
-            "name": "EV",
+            "name": "EV(JIS)",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -284,7 +284,7 @@
                     }
                 ]
             },
-            "name": "Default",
+            "name": "Nightowl(US)",
             "selected": true,
             "simple_modifications": [
                 {
@@ -300,6 +300,10 @@
                     "to": [{ "key_code": "right_command" }]
                 }
             ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "name": "Default",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
