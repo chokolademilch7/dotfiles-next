@@ -19,11 +19,11 @@ This repository contains my dotfiles and applications.
 ```
 
 ## Setup Applications
-neovim init
+### neovim init
 1. nvim open
 2. `<leader><leader>z`
 
-tmux init
+### tmux init
 1. tmux pane open
 2. `M-o I`
 
