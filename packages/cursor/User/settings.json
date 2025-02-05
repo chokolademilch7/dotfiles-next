@@ -140,6 +140,10 @@
       "commands": ["cursor.generateGitCommitMessage"]
     },
     {
+      "before": ["<leader>", "g", "o"],
+      "commands": ["git.pull"]
+    },
+    {
       "before": ["<leader>", "g", "s"],
       "commands": ["git.stage"]
     },
