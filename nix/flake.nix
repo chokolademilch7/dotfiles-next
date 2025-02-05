@@ -15,7 +15,7 @@
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations."test" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."nightowl" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,

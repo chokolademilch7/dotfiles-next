@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "test";
-  home.homeDirectory = "/Users/test";
+  home.username = "nightowl";
+  home.homeDirectory = "/Users/nightowl";
 
   home.stateVersion = "25.05";
 
@@ -23,8 +23,6 @@
     pkgs.fzf
     pkgs.jq
     pkgs.yq
-    pkgs.neovim
-    pkgs.lazygit
     pkgs.delta
     pkgs.gh
     pkgs.ghq
@@ -32,6 +30,7 @@
     pkgs.plemoljp
     pkgs.plemoljp-nf
     pkgs.plemoljp-hs
+    pkgs.mise
   ];
 
   home.file = {
@@ -45,12 +44,6 @@
     # starship
     ".config/starship.toml".source = ../packages/starship/.config/starship.toml;
     
-    # karabiner
-    ".config/karabiner/karabiner.json".source = ../packages/karabiner/.config/karabiner/karabiner.json;
-    
-    # nvim
-    ".config/nvim".source = ../packages/nvim/.config/nvim;
-    
     # lazygit
     ".config/lazygit".source = ../packages/lazygit/.config/lazygit;
     
@@ -59,7 +52,6 @@
     
     # # alacritty
     ".config/alacritty/alacritty.toml".source = ../packages/alacritty/.config/alacritty/alacritty.toml;
-    
   };
 
   home.sessionVariables = {
@@ -72,7 +64,6 @@
   # Home Manager のアクティベーション時に zcompile を実行する
   home.activation = {
     zcompile = ''
-      set -e
       echo "zcompile を実行中..."
       ${pkgs.zsh}/bin/zsh -c "zcompile $HOME/.zshrc"
     '';

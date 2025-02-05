@@ -15,5 +15,5 @@ echo "Do you want to switch to the new home-manager config? (y/n)"
 read -r REPLY
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    nix run github:nix-community/home-manager --experimental-features "nix-command flakes" -- switch
+    nix run github:nix-community/home-manager --experimental-features "nix-command flakes" switch -- --experimental-features "nix-command flakes"
 fi
