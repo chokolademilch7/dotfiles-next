@@ -141,7 +141,7 @@
     },
     {
       "before": ["<leader>", "g", "o"],
-      "commands": ["git.pull"]
+      "commands": ["git.checkout"]
     },
     {
       "before": ["<leader>", "g", "s"],
@@ -153,6 +153,10 @@
     },
     {
       "before": ["<leader>", "g", "p"],
+      "commands": ["git.pull"]
+    },
+    {
+      "before": ["<leader>", "g", "P"],
       "commands": ["git.push"]
     },
     {
