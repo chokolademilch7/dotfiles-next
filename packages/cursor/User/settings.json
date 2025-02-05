@@ -136,8 +136,20 @@
       "commands": ["bookmarks.listFromAllFiles"]
     },
     {
-      "before": ["<leader>", "<leader>", "c"],
+      "before": ["<leader>", "g", "g"],
       "commands": ["cursor.generateGitCommitMessage"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["git.stage"]
+    },
+    {
+      "before": ["<leader>", "g", "u"],
+      "commands": ["git.unstaged"]
+    },
+    {
+      "before": ["<leader>", "g", "p"],
+      "commands": ["git.push"]
     },
     {
       "before": ["<leader>", "g", "c"],
