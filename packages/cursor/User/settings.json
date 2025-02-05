@@ -140,7 +140,7 @@
       "commands": ["cursor.generateGitCommitMessage"]
     },
     {
-      "before": ["<leader>", "g", "o"],
+      "before": ["<leader>", "g", "c"],
       "commands": ["git.checkout"]
     },
     {
@@ -160,7 +160,7 @@
       "commands": ["git.push"]
     },
     {
-      "before": ["<leader>", "g", "c"],
+      "before": ["<leader>", "g", "o"],
       "commands": ["git.commit"]
     }
   ],
