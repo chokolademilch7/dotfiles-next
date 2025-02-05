@@ -1,24 +1,36 @@
-## Try this before setting up
-https://github.com/wbthomason/packer.nvim#quickstart
+# Overview
+This repository contains my dotfiles and applications.
+## Install Applications
+- dynamic applications → Homebrew
+- static applications → Nix-flake + Home-manager
 
-→ `<leader><leader>z`
+## Install Dotfiles
+- dynamic dotfiles → GNU stow
+- static dotfiles → Nix-flake + Home-manager
+
+# Setup Homebrew & Nix
+- Homebrew: https://brew.sh/ja  
+- Nix: https://nixos.org/download/
+
+# Install Dotfiles
+```
+./install_dotfiles.sh
+./install_nix.sh
+```
+
+## Setup Applications
+neovim init
+1. nvim open
+2. `<leader><leader>z`
 
 tmux init
-1. https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation
-2. tmux pane open
-3. `M-o I`
+1. tmux pane open
+2. `M-o I`
 
-## Additional Settings
-### alt + tab
+# Additional Settings for macOS
+## alt + tab
 systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 
 `defaults write -g InitialKeyRepeat -int 11`
 
 `defaults write -g KeyRepeat -int 1`
-
-## Experimental
-### Use Nix flake + Home Manager
-```
-nix run github:nix-community/home-manager -- switch --experimental-features "nix-command flakes"
-```
-
