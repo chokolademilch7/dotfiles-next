@@ -24,7 +24,7 @@
     pkgs.jq
     pkgs.yq
     pkgs.delta
-    pkgs.gh
+    pkgs.lazygit
     pkgs.ghq
     pkgs.terminal-notifier
     pkgs.plemoljp
@@ -66,6 +66,9 @@
     zcompile = ''
       echo "zcompile を実行中..."
       ${pkgs.zsh}/bin/zsh -c "zcompile $HOME/.zshrc"
+    '';
+    nvim-packer = ''
+      ${pkgs.git}/bin/git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
     '';
   };
 }
