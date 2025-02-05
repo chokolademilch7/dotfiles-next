@@ -1,4 +1,4 @@
-import = ["/Users/test/.config/alacritty/theme/aura-theme.toml"]
+import = ["~/.config/alacritty/theme/aura-theme.toml"]
 
 [shell]
 program = "/bin/zsh"

@@ -240,7 +240,7 @@
   "editor.accessibilitySupport": "off",
   "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
   "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select com.google.inputmethod.Japanese.Roman",
-  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",

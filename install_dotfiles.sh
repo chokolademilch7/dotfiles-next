@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 STOW_PACKAGES_DIR="./packages"
+APPLICATION_DIR="$HOME/Library/Application Support"
 
 if ! type brew >/dev/null 2>&1; then
   echo "brew is not installed."
@@ -10,17 +11,10 @@ if type stow >/dev/null 2>&1; then
   echo "Are you ready ? We're ready for you. y/N"
   read input
   if [ $input = "y" ] || [ $input = "yes" ]; then
-    stow -d $STOW_PACKAGES_DIR -t $HOME zsh
     stow -d $STOW_PACKAGES_DIR -t $HOME karabiner
-    stow -d $STOW_PACKAGES_DIR -t $HOME nix
     stow -d $STOW_PACKAGES_DIR -t $HOME nvim
-    stow -d $STOW_PACKAGES_DIR -t $HOME lazygit
-    stow -d $STOW_PACKAGES_DIR -t $HOME yabai
-    stow -d $STOW_PACKAGES_DIR -t $HOME skhd
-    stow -d $STOW_PACKAGES_DIR -t $HOME tmux
     stow -d $STOW_PACKAGES_DIR -t $HOME alacritty
-    stow -d $STOW_PACKAGES_DIR -t $HOME starship
-    stow -d $STOW_PACKAGES_DIR -t $HOME neovide
+    stow -d $STOW_PACKAGES_DIR -t $APPLICATION_DIR/Cursor cursor
     echo "Success!!"
   elif [ $input = "n" ] || [ $input = "no" ]; then
     echo "See you later."

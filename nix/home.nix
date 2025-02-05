@@ -50,9 +50,6 @@
     
     # tmux
     ".config/tmux/tmux.conf".source = ../packages/tmux/.config/tmux/tmux.conf;
-    
-    # # alacritty
-    ".config/alacritty/alacritty.toml".source = ../packages/alacritty/.config/alacritty/alacritty.toml;
   };
 
   home.sessionVariables = {
@@ -69,7 +66,12 @@
       ${pkgs.zsh}/bin/zsh -c "zcompile $HOME/.zshrc"
     '';
     nvim-packer = ''
-      ${pkgs.git}/bin/git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+      if [ -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+        echo "packer.nvim は既に存在します。"
+      else
+        echo "Cloning packer.nvim..."
+        ${pkgs.git}/bin/git clone --depth 1 https://github.com/wbthomason/packer.nvim "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+      fi
     '';
   };
 }
