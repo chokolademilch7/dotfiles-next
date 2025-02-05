@@ -24,12 +24,12 @@ This repository contains my dotfiles and applications.
 ./install_dotfiles.sh
 ```
 
-## Setup Applications
-### neovim init
+# Setup Applications 📝
+## neovim init
 1. nvim open
 2. `<leader><leader>z`
 
-### tmux init
+## tmux init
 1. tmux pane open
 2. `M-o I`
 
