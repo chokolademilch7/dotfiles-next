@@ -1,4 +1,4 @@
-# Overview
+# Overview 🏠️
 This repository contains my dotfiles and applications.
 ## Install Applications
 - dynamic applications → Homebrew
@@ -8,14 +8,20 @@ This repository contains my dotfiles and applications.
 - dynamic dotfiles → GNU stow
 - static dotfiles → Nix-flake + Home-manager
 
-# Setup Homebrew & Nix
+# Setup Homebrew & Nix 🛠️
 - Homebrew: https://brew.sh/ja  
 - Nix: https://nixos.org/download/
 
-# Install Dotfiles
+
+# Install Applications 📦
 ```
-./install_dotfiles.sh
+./install_applications.sh
+```
+
+# Install Dotfiles 📁
+```
 ./install_nix.sh
+./install_dotfiles.sh
 ```
 
 ## Setup Applications
@@ -27,7 +33,7 @@ This repository contains my dotfiles and applications.
 1. tmux pane open
 2. `M-o I`
 
-# Additional Settings for macOS
+# Additional Settings for macOS 🍎
 ## alt + tab
 systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 
