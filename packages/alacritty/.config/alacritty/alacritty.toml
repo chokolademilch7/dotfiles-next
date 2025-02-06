@@ -1,6 +1,5 @@
-import = ["~/.config/alacritty/theme/aura-theme.toml"]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux a -t 0 || tmux"]
 
@@ -433,3 +432,8 @@ opacity = 0.9
 
 [window.padding]
 x = 8
+
+[general]
+import = ["~/.config/alacritty/theme/aura-theme.toml"]
+
+[terminal]
