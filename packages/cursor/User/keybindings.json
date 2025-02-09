@@ -192,7 +192,7 @@
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
   {
-    "key": "cmd+n",
+    "key": "alt+o c",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus && terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
@@ -202,7 +202,7 @@
     "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
   {
-    "key": "cmd+o",
+    "key": "alt+o s",
     "command": "workbench.action.terminal.focusTabs",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
   },

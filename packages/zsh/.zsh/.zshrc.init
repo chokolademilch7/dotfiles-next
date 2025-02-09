@@ -1,4 +1,4 @@
 # init
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-eval "$(/Users/nightowl/.nix-profile/bin/mise activate zsh)"
+eval "$(~/.nix-profile/bin/mise activate zsh)"
