@@ -325,5 +325,5 @@
       "text": "Use conventional commit message format. If the other logs are in English, describe them in English, if they are in Japanese, describe them in Japanese, according to the surrounding style."
     }
   ],
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
 }
