@@ -40,3 +40,17 @@ systemsettings -> keyboard -> shortcut -> keyboard -> next window ctl
 `defaults write -g InitialKeyRepeat -int 11`
 
 `defaults write -g KeyRepeat -int 1`
+
+# Update Settings 🔄
+## Edit settings
+```
+# hm: home-manager e: edit
+# hm+e
+hme
+```
+## Apply settings
+```
+# hm: home-manager s: switch --impure
+# hm+s
+hms
+```
