@@ -1,8 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "nightowl";
-  home.homeDirectory = "/Users/nightowl";
+  # use impure way to get username and home directory
+  home.username = builtins.getEnv "USER";
+  home.homeDirectory = builtins.getEnv "HOME";
 
   home.stateVersion = "25.05";
 

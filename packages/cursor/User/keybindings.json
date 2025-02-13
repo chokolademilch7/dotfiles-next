@@ -244,6 +244,10 @@
     "key": "alt+cmd+left",
     "command": "-workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+r cmd+o",
+    "command": "workbench.action.chat.quickVoiceChat"
   }
 ]
 

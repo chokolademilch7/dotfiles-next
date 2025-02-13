@@ -76,6 +76,10 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
+      "before": ["s", "l"],
+      "commands": ["workbench.action.quickTextSearch"]
+    },
+    {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
     },
