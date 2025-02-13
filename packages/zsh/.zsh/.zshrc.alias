@@ -3,6 +3,7 @@ alias co=code-insiders
 alias cu=cursor
 alias t=tmux
 alias g=git
+alias d=docker
 alias ga="current-gh-auth"
 alias ls=lsd
 alias la="lsd -la"
