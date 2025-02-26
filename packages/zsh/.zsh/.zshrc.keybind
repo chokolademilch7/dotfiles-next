@@ -14,8 +14,15 @@ function jump_ghq () {
 }
 zle -N jump_ghq
 
+function checkout_pr_list () {
+  gh pr list | fzf | cut -f1 | xargs gh pr checkout
+  zle reset-prompt
+}
+zle -N checkout_pr_list
+
 # keybindings
 bindkey -e
 bindkey '^o^o' jump_zoxide
 bindkey '^g' jump_ghq
+bindkey '^o^p' checkout_pr_list
 
