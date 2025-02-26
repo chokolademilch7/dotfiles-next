@@ -80,6 +80,14 @@
       "commands": ["workbench.action.quickTextSearch"]
     },
     {
+      "before": ["s", "o"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["s", "r"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
     },
@@ -118,10 +126,6 @@
     {
       "before": ["leader", "g", "k"],
       "commands": ["workbench.action.editor.previousChange"]
-    },
-    {
-      "before": ["s", "r"],
-      "commands": ["swiper.swiper-word-at-cursor"]
     },
     {
       "before": ["g", "t"],
@@ -329,6 +333,7 @@
       "text": "Use conventional commit message format. If the other logs are in English, describe them in English, if they are in Japanese, describe them in Japanese, according to the surrounding style."
     }
   ],
-  "workbench.editor.enablePreview": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "outline.collapseItems": "alwaysCollapse",
+  "workbench.editor.enablePreview": false,
 }
