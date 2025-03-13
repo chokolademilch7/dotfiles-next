@@ -4,6 +4,14 @@
   // user-keybindings
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["ctrl+j"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["ctrl+k"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
+    {
       "before": ["leader", "c"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
@@ -170,6 +178,10 @@
     {
       "before": ["<leader>", "g", "o"],
       "commands": ["git.commit"]
+    },
+    {
+      "before": ["<leader>", "g", "k"],
+      "commands": ["pr.openDescription"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -266,7 +278,7 @@
   },
   // "workbench.activityBar.orientation": "vertical",
   "editor.accessibilitySupport": "off",
-  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select com.google.inputmethod.Japanese.base",
   "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select com.google.inputmethod.Japanese.Roman",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.profiles.osx": {
@@ -336,4 +348,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "outline.collapseItems": "alwaysCollapse",
   "workbench.editor.enablePreview": false,
+  "git.openRepositoryInParentFolders": "always",
+  "vim.autoSwitchInputMethod.defaultIM": "/opt/homebrew/bin/im-select com.google.inputmethod.Japanese.base",
+  "vim.autoSwitchInputMethod.enable": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
 }

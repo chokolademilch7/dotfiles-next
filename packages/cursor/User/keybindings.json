@@ -248,6 +248,16 @@
   {
     "key": "cmd+r cmd+o",
     "command": "workbench.action.chat.quickVoiceChat"
+  },
+  {
+    "key": "alt+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "alt+.",
+    "command": "workbench.action.openGlobalKeybindingsFile"
   }
 ]
+
+
 
