@@ -33,6 +33,7 @@
     pkgs.plemoljp-hs
     pkgs.mise
     pkgs.xplr
+    pkgs.colima
   ];
 
   home.file = {
