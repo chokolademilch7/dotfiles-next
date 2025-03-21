@@ -80,6 +80,10 @@
       "commands": ["references-view.findReferences"]
     },
     {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
       "before": ["s", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
@@ -178,6 +182,10 @@
     {
       "before": ["<leader>", "g", "o"],
       "commands": ["git.commit"]
+    },
+    {
+      "before": ["<leader>", "g", "h"],
+      "commands": ["pr.create"]
     },
     {
       "before": ["<leader>", "g", "k"],
