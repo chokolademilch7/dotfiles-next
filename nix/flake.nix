@@ -20,9 +20,10 @@
       hostPlatform = nixpkgs.lib.systems.examples.aarch64-darwin;
       pkgs = nixpkgs.legacyPackages.${system};
       user = builtins.getEnv "USER";
+      hostname = builtins.getEnv "HOST";
     in {
       darwinConfigurations = {
-        "nightowl" = nix-darwin.lib.darwinSystem {
+        "${hostname}" = nix-darwin.lib.darwinSystem {
           inherit system;
           specialArgs = { inherit hostPlatform; };
           modules = [ ./darwin.nix ];
