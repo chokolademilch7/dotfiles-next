@@ -24,6 +24,11 @@ This repository contains my dotfiles and applications.
 ./install_dotfiles.sh
 ```
 
+# Install Darwin Settings 🔄
+```zsh
+nix run nix-darwin/master#darwin-rebuild -- --flake . switch --impure
+```
+
 # Setup Applications 📝
 ## neovim init
 1. nvim open
