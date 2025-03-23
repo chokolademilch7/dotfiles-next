@@ -15,5 +15,12 @@
         orientation = "bottom";
       };
     };
+    activationScripts = {
+      postActivation = {
+        text = ''
+          defaults write -g NSStatusItemSpacing -int 8
+        '';
+      };
+    };
   };
 }
