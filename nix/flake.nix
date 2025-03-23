@@ -20,7 +20,7 @@
       hostPlatform = nixpkgs.lib.systems.examples.aarch64-darwin;
       pkgs = nixpkgs.legacyPackages.${system};
       user = builtins.getEnv "USER";
-      hostname = builtins.getEnv "HOST";
+      hostname = builtins.getEnv "DARWIN_HOSTNAME";
     in {
       darwinConfigurations = {
         "${hostname}" = nix-darwin.lib.darwinSystem {
