@@ -16,6 +16,4 @@ alias ldo="lazydocker"
 alias hm=home-manager
 alias hme="home-manager edit"
 alias hms="home-manager switch --impure"
-alias hmd="darwin-rebuild switch ${HOME_MANAGER_DIR} --impure"
-alias hmm="echo ${HOME_MANAGER_DIR}"
 alias x="xplr"
