@@ -14,6 +14,12 @@
         autohide = true;
         orientation = "bottom";
       };
+      controlcenter = {
+        BatteryShowPercentage = true;
+      };
+      trackpad = {
+        ActuationStrength = 0;
+      };
     };
     activationScripts = {
       postActivation = {
