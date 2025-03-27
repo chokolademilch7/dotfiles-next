@@ -71,6 +71,9 @@
       "before": ["s", "h"],
       "commands": ["workbench.action.openPreviousEditorFromHistory"]
     },
+    { "before": ["g", "p", "d"], "commands": ["editor.action.peekDefinition"] },
+    { "before": ["g", "p", "i"], "commands": ["editor.action.peekImplementation"] },
+    { "before": ["g", "p", "t"], "commands": ["editor.action.goToTypeDefinition"] },
     {
       "before": ["g", "k", "l"],
       "commands": ["editor.action.revealDefinitionAside"]
@@ -83,9 +86,17 @@
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
     },
+    // {
+    //   "before": ["s", "f"],
+    //   "commands": ["workbench.action.quickOpen"]
+    // },
     {
       "before": ["s", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["find-it-faster.findFiles"]
+    },
+    {
+      "before": ["s", "s"],
+      "commands": ["find-it-faster.findWithinFiles"]
     },
     {
       "before": ["s", "l"],
@@ -188,7 +199,7 @@
       "commands": ["pr.create"]
     },
     {
-      "before": ["<leader>", "g", "k"],
+      "before": ["<leader>", "g", "d"],
       "commands": ["pr.openDescription"]
     }
   ],
@@ -363,4 +374,9 @@
     "asvetliakov.vscode-neovim": 1
   },
   "editor.columnSelection": true,
+  "peacock.affectTitleBar": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "find-it-faster.advanced.disableStartupChecks": true,
+  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "find-it-faster.general.batTheme": "GitHub",
 }

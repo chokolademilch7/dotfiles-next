@@ -256,6 +256,16 @@
   {
     "key": "alt+.",
     "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    "key": "alt+f",
+    "command": "togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "cmd+r f2",
+    "command": "-togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
   }
 ]
 
