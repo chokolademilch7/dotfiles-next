@@ -4,3 +4,14 @@ export EDITOR=nvim
 export HOME_MANAGER_DIR=$HOME/.config/home-manager
 export DARWIN_HOSTNAME=$(hostname -s)
 export PATH="/usr/local/go/bin:$PATH"
+export BAT_THEME="ansi"
+export FZF_DEFAULT_OPTS="
+  $FZF_DEFAULT_OPTS
+  --layout=reverse
+  --bind='ctrl-f:forward-char,ctrl-b:backward-char'
+  --bind='ctrl-n:down,ctrl-p:up'
+  --bind='ctrl-d:page-down,ctrl-u:page-up'
+  --bind='ctrl-a:beginning-of-line,ctrl-e:end-of-line'
+  --bind='ctrl-k:kill-line'
+  --bind='alt-b:backward-word,alt-f:forward-word'
+"

@@ -210,7 +210,6 @@
                 }
             ],
             "name": "EV(JIS)",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "international3" },
@@ -315,6 +314,7 @@
                 }
             ],
             "name": "Nightowl(US)",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
