@@ -8,14 +8,27 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nix-darwin, ... }:
     let
       system = "aarch64-darwin";
+      hostPlatform = nixpkgs.lib.systems.examples.aarch64-darwin;
       pkgs = nixpkgs.legacyPackages.${system};
       user = builtins.getEnv "USER";
+      hostname = builtins.getEnv "DARWIN_HOSTNAME";
     in {
+      darwinConfigurations = {
+        "${hostname}" = nix-darwin.lib.darwinSystem {
+          inherit system;
+          specialArgs = { inherit hostPlatform; };
+          modules = [ ./darwin.nix ];
+        };
+      };
       homeConfigurations = {
         "${user}" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;

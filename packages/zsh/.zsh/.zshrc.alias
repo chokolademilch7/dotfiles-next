@@ -15,5 +15,7 @@ alias lgl="lazygit --use-config-file=$HOME/.config/lazygit/config.yml log"
 alias ldo="lazydocker"
 alias hm=home-manager
 alias hme="home-manager edit"
-alias hms="home-manager switch --impure"
+alias hms="home-manager switch --impure && source $HOME/.zshrc" 
+alias hmd="(cd ${HOME_MANAGER_DIR} && darwin-rebuild --flake . switch --impure)"
 alias x="xplr"
+alias wt="git worktree"
