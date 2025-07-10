@@ -266,8 +266,15 @@
     "key": "cmd+r f2",
     "command": "-togglePeekWidgetFocus",
     "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "alt+f",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "cppSuggestion && !editorReadonly || inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "cmd+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "cppSuggestion && !editorReadonly || inlineSuggestionVisible && !editorReadonly"
   }
 ]
-
-
-

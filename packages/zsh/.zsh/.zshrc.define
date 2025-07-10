@@ -4,6 +4,7 @@ export EDITOR=nvim
 export HOME_MANAGER_DIR=$HOME/.config/home-manager
 export DARWIN_HOSTNAME=$(hostname -s)
 export PATH="/usr/local/go/bin:$PATH"
+export PATH="/Users/toki/.bun/bin:$PATH"
 export BAT_THEME="ansi"
 export FZF_DEFAULT_OPTS="
   $FZF_DEFAULT_OPTS
