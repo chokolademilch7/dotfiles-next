@@ -1,4 +1,3 @@
-local lspconfig = require('lspconfig')
 local ufo = require('ufo')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
@@ -6,9 +5,10 @@ capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true
 }
-local language_servers = lspconfig.util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
+-- Use vim.lsp.config instead of lspconfig
+local language_servers = {'lua_ls', 'gopls', 'ts_ls', 'eslint', 'jsonls'} -- list servers manually
 for _, ls in ipairs(language_servers) do
-  lspconfig[ls].setup({
+  vim.lsp.config(ls, {
     capabilities = capabilities
   })
 end
