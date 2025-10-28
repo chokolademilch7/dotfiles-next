@@ -1,0 +1,3 @@
+keymap_procs: # keymap when process list is focused
+  <C-q>: { c: toggle-focus }
+  <C-a>: null # unbind key

@@ -34,6 +34,7 @@
     pkgs.mise
     pkgs.xplr
     pkgs.colima
+    pkgs.mprocs
   ];
 
   home.file = {
@@ -52,6 +53,9 @@
     
     # tmux
     ".config/tmux/tmux.conf".source = ../packages/tmux/.config/tmux/tmux.conf;
+
+    # mprocs
+    ".config/mprocs/mprocs.yaml".source = ../packages/mprocs/.config/mprocs/mprocs.yaml;
   };
 
   home.sessionVariables = {
