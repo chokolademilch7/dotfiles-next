@@ -124,10 +124,15 @@ local function init()
 
   -- Lint & Formatter
   use({
-    'jose-elias-alvarez/null-ls.nvim',
-    requires = 'nvim-lua/plenary.nvim',
+    'stevearc/conform.nvim',
     config = function()
-      require('config.null-ls')
+      require('config.conform')
+    end,
+  })
+  use({
+    'mfussenegger/nvim-lint',
+    config = function()
+      require('config.nvim-lint')
     end,
   })
 
@@ -278,26 +283,26 @@ local function init()
   })
 
   -- AI Asistant Tools
-  use({
-    'github/copilot.vim',
-  })
-  use({
-    'jackMort/ChatGPT.nvim',
-    config = function()
-      require('config.chatGPT')
-    end,
-    requires = {
-      'MunifTanjim/nui.nvim',
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-    },
-  })
-  use({
-    'aduros/ai.vim',
-    config = function()
-      require('config.ai')
-    end,
-  })
+  -- use({
+  --   'github/copilot.vim',
+  -- })
+  -- use({
+  --   'jackMort/ChatGPT.nvim',
+  --   config = function()
+  --     require('config.chatGPT')
+  --   end,
+  --   requires = {
+  --     'MunifTanjim/nui.nvim',
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-telescope/telescope.nvim',
+  --   },
+  -- })
+  -- use({
+  --   'aduros/ai.vim',
+  --   config = function()
+  --     require('config.ai')
+  --   end,
+  -- })
   -- use({
   --   'dense-analysis/neural',
   --   config = function()

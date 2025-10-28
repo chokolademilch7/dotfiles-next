@@ -1,4 +1,3 @@
-local lspconfig = require('lspconfig')
 local keymap = vim.keymap
 local lsp = vim.lsp
 local diagnostic = vim.diagnostic
@@ -46,42 +45,42 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
-lspconfig['lua_ls'].setup({
+vim.lsp.config('lua_ls', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['emmet_ls'].setup({
+vim.lsp.config('emmet_ls', {
   capabilities = capabilities,
   filetypes = { 'html', 'typescriptreact', 'javascript', 'css' },
   on_attach = on_attach,
 })
-lspconfig['eslint'].setup({
+vim.lsp.config('eslint', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['ts_ls'].setup({
+vim.lsp.config('ts_ls', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['jsonls'].setup({
+vim.lsp.config('jsonls', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['tailwindcss'].setup({
+vim.lsp.config('tailwindcss', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['gopls'].setup({
+vim.lsp.config('gopls', {
   capabilities = capabilities,
   on_attach = on_attach,
 })
-lspconfig['bashls'].setup({
+vim.lsp.config('bashls', {
   on_attach = on_attach,
 })
-lspconfig['terraform_lsp'].setup({
+vim.lsp.config('terraform_lsp', {
   on_attach = on_attach,
 })
-lspconfig['biome'].setup({
+vim.lsp.config('biome', {
   on_attach = on_attach,
 })
 -- lspconfig['yamlls'].setup({
