@@ -210,7 +210,6 @@
                 }
             ],
             "name": "EV(JIS)",
-            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "international3" },
@@ -253,19 +252,8 @@
                         ]
                     },
                     {
-                        "description": "Change right_option+hjkl to arrow keys",
+                        "description": "Change right_option+jk to arrow keys",
                         "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": ["right_option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "left_arrow" }],
-                                "type": "basic"
-                            },
                             {
                                 "from": {
                                     "key_code": "j",
@@ -287,17 +275,6 @@
                                 },
                                 "to": [{ "key_code": "up_arrow" }],
                                 "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": ["right_option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "right_arrow" }],
-                                "type": "basic"
                             }
                         ]
                     }
@@ -315,6 +292,7 @@
                 }
             ],
             "name": "Nightowl(US)",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -333,6 +311,41 @@
         },
         {
             "name": "Default",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 641,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "caps_lock" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "right_option" }]
+                        }
+                    ]
+                }
+            ],
+            "name": "Win",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]

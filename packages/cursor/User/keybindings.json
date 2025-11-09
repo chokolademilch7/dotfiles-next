@@ -266,6 +266,10 @@
     "key": "cmd+r f2",
     "command": "-togglePeekWidgetFocus",
     "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
   }
 ]
 

@@ -12,7 +12,12 @@ notARepository: 'quit'
 keybinding:
   universal:
     copyToClipboard: 'Y'
-# customCommands:
+customCommands:
+  - key: 'G'
+    context: 'files'
+    command: "claude --model haiku --dangerously-skip-permissions -p '/c'"
+    description: 'Commit with auto generated msg.'
+    subprocess: false
 #   - key: 'o'
 #     context: 'localBranches'
 #     command: 'gh pr create -H {{ .SelectedLocalBranch.Name }}'

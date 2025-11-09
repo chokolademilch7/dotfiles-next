@@ -201,6 +201,45 @@
     {
       "before": ["<leader>", "g", "d"],
       "commands": ["pr.openDescription"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": [
+        {
+          "command": "editor.action.showHover",
+          "args": { "focus": true }
+        }
+      ]
+    },
+    {
+      "key": "h",
+      "command": "editor.action.scrollLeftHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "j",
+      "command": "editor.action.scrollDownHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "k",
+      "command": "editor.action.scrollUpHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "l",
+      "command": "editor.action.scrollRightHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "ctrl+u",
+      "command": "editor.action.pageUpHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "ctrl+d",
+      "command": "editor.action.pageDownHover",
+      "when": "editorHoverFocused"
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -236,13 +275,51 @@
     {
       "before": ["ctrl+k"],
       "commands": ["deleteAllRight"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": [
+        {
+          "command": "editor.action.showHover",
+          "args": { "focus": true }
+        }
+      ]
+    },
+    {
+      "key": "h",
+      "command": "editor.action.scrollLeftHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "j",
+      "command": "editor.action.scrollDownHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "k",
+      "command": "editor.action.scrollUpHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "l",
+      "command": "editor.action.scrollRightHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "ctrl+u",
+      "command": "editor.action.pageUpHover",
+      "when": "editorHoverFocused"
+    },
+    {
+      "key": "ctrl+d",
+      "command": "editor.action.pageDownHover",
+      "when": "editorHoverFocused"
     }
   ],
   "workbench.startupEditor": "none",
   "vim.easymotion": true,
   "editor.fontFamily": "PlemolJP35 Console NF",
   "editor.tabSize": 2,
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/opt/homebrew/bin/nvim",
   "highlightLine.borderWidth": "1.2px",
@@ -280,20 +357,8 @@
   "editor.guides.bracketPairs": false,
   "window.commandCenter": false,
   "window.title": "${rootName}${separator}${activeEditorMedium}${separator}${profileName}",
-  // "apc.electron": {
-  //   "frame": false,
-  //   "opacity": 0.9
-  // },
-  // "apc.stylesheet": {
-  //   // panelのタイトルバーを非表示にする
-  //   "#workbench\\.parts\\.panel > div.composite.title": "display: none;",
-  //   // sidebarを非表示にする
-  //   "#workbench\\.parts\\.sidebar > div.composite.title": "display: none;"
-  // },
-  // "blockman.n04Sub01ColorComboPresetForDarkTheme": "Classic Dark 1 (Super gradients)",
-  "workbench.iconTheme": "catppuccin-perfect-latte",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   // "workbench.activityBar.orientation": "vertical",
   "editor.accessibilitySupport": "off",
@@ -328,7 +393,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "update.mode": "manual",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -344,7 +408,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.userWords": ["Openapi", "tanstack"],
+  "cSpell.userWords": ["Openapi", "repomix", "tanstack"],
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.cursorBlinking": "solid",
   "cursor.cpp.enablePartialAccepts": true,
@@ -379,4 +443,41 @@
   "find-it-faster.advanced.disableStartupChecks": true,
   "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
   "find-it-faster.general.batTheme": "GitHub",
+  "yaml.schemas": {
+    "file:///home/ruman_l/.cursor-server/extensions/atlassian.atlascode-3.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.enabled": true,
+  "atlascode.bitbucket.enabled": false,
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "editor.formatOnSave": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "update.releaseTrack": "prerelease",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "window.newWindowProfile": "Nightowl-Cursor",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "remote.SSH.remotePlatform": {
+    "wsl": "linux",
+    "win": "linux"
+  }
 }
