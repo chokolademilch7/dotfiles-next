@@ -77,11 +77,6 @@
     "command": "-projectManager.listProjects"
   },
   {
-    "key": "ctrl+w",
-    "command": "-expand_region",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+shift+w",
     "command": "-undo_expand_region",
     "when": "editorHasSelection && editorTextFocus"
@@ -89,11 +84,6 @@
   {
     "key": "cmd+e",
     "command": "-actions.findWithSelection"
-  },
-  {
-    "key": "cmd+e",
-    "command": "expand_region",
-    "when": "editorTextFocus"
   },
   {
     "key": "shift+l",
@@ -270,8 +260,13 @@
   {
     "key": "cmd+i",
     "command": "composerMode.agent"
+  },
+  {
+    "key": "cmd+r b",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-composer.startComposerPrompt"
   }
 ]
-
-
-

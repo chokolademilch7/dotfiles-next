@@ -1,6 +1,6 @@
 # alias
 alias co=code-insiders
-alias cu=cursor
+alias cu='cursor --profile nightowl'
 alias t=tmux
 alias g=git
 alias d=docker
